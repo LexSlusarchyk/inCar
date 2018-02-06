@@ -1,0 +1,28 @@
+<ul class="tree list-group">
+  <li data-ng-transclude></li>
+  <li data-ng-repeat="item in vm.treeItems track by $index"
+      data-ng-click="vm.toggleItemExpantion(item, $event)"
+      class="nested-items">
+    <div class="list-group-item">
+      <span ng-bind="item.name"></span>
+      <div class="pull-right">
+				<span>
+					<button data-ng-show="item.parent == 1" class="btn btn-default btn-xs" ng-click="vm.showAddLocationModal(item, $event)" title="Add location">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+					<button class="btn btn-default btn-xs" ng-click="vm.showEditLocationModal(item, $event)" title="Edit Location">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+					<button class="btn btn-danger btn-xs" ng-click="vm.showDeleteLocationModal(item, $event)" title="Delete Location">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+				</span>
+      </div>
+    </div>
+
+
+    <div data-ng-if="item.isExpanded" class="nested-items">
+      <locations-tree data-tree-items="item.children"></locations-tree>
+    </div>
+  </li>
+</ul>

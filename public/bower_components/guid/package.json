@@ -1,0 +1,27 @@
+{
+  "name": "guid",
+  "version": "1.0.0",
+  "description": "This could easily generate a guid string for javascript language.",
+  "main": "guid.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascode/jif-guid.git"
+  },
+  "keywords": [
+    "guid"
+  ],
+  "author": "金飞",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ascode/jif-guid/issues"
+  },
+  "homepage": "https://github.com/ascode/jif-guid#readme"
+}

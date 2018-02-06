@@ -1,0 +1,17 @@
+<div class="container-fluid">
+
+    <div>
+      <ul class="list-group dashboard-navigation">
+        <h1>Texts</h1>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'about'})">About</a></li>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'rules'})">Rules</a></li>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'contact'})">Contact Us</a></li>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'terms'})">Site terms</a></li>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'privacy'})">Privacy</a></li>
+        <li class="list-group-item"><a ui-sref="dashboard.texts({type: 'faq'})">FAQ</a></li>
+      </ul>
+    </div>
+
+    <summer text="vm.text"></summer>
+    <button class="btn btn-default" data-ng-click="vm.updateText()">Save</button>
+</div>

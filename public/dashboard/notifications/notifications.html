@@ -1,0 +1,14 @@
+<div class="admin-notifications">
+  <a ui-sref="dashboard.notifications-manage" class="btn btn-default main-add-btn">Create Notification</a>
+
+  <div class="notifications-list">
+    <div data-ng-repeat="notification in vm.notifications.data track by $index"
+         class="notification-item"
+    >
+      <a data-ng-bind="notification.title"
+         data-ui-sref="dashboard.notifications-manage({id: notification.id})"
+      ></a>
+    </div>
+
+  </div>
+</div>

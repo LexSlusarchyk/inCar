@@ -1,0 +1,24 @@
+<div class="container-fluid users-dashboard-view">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span>Users</span>
+      <span>
+        <input type="text" placeholder="Search by email..." data-ng-model="vm.userSearch">
+      </span>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+        <tr data-ng-repeat="user in vm.users | filter: vm.filter track by user.id">
+          <td data-ng-bind="$index"></td>
+          <td data-ng-bind="user.email"></td>
+          <td data-ng-bind="user.role"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

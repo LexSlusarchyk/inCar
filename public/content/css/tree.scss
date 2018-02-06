@@ -1,0 +1,13 @@
+.tree {
+  list-style-type: none;
+  margin-bottom: 0;
+
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    .nested-items {
+      margin-left: 20px;
+    }
+  }
+}

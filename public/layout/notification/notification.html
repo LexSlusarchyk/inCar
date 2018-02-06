@@ -1,0 +1,18 @@
+<div class="notifications-list">
+  <div class="notification-item alert alert-warning"
+       role="alert"
+       data-ng-repeat="notification in vm.notifications.data track by notification.id"
+       data-ng-if="!vm.isItemIgnored(notification)"
+  >
+    <p class="notification-text"
+       data-truncate
+       data-ng-bind="notification.text"
+       data-ng-if="notification.text"
+       data-toggle="true"
+    ></p>
+
+    <span data-ng-click="vm.removeNotification(notification.id)"
+        class="fa fa-times remove-button"
+        aria-hidden="true"></span>
+  </div>
+</div>

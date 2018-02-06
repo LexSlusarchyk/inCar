@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="$dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title" id="{{$index}}-label">Create ticket</h4>
+</div>
+<div class="modal-body">
+    <h4>Create subcategory for event:</h4>
+    <form class="input-group" ng-submit="vm.manageTicket(vm.ticket)">
+        <input class="form-control" type="text" placeholder="Ticket Name" ng-model="vm.ticket.name">
+        <input class="form-control" type="number" placeholder="Ticket Price" ng-model="vm.ticket.price">
+        <input class="form-control" type="number" placeholder="Ticket Quantity" ng-model="vm.ticket.quantity">
+        <input class="btn btn-success" type="submit">
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-sm btn-default" ng-click="$dismiss()">Close</button>
+</div>

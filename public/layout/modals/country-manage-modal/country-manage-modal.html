@@ -1,0 +1,16 @@
+
+<div class="modal-header">
+  <button type="button" class="close" ng-click="$dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <h4 class="modal-title" id="{{$index}}-label">Add Location</h4>
+</div>
+<div class="modal-body">
+  <h4 ng-show="vm.parentLocation">Create sub-location of "{{vm.parentLocation.name}}":</h4>
+  <h4 ng-show="!vm.parentLocation">Edit location:</h4>
+  <form class="input-group" ng-submit="vm.manageLocation()">
+    <input class="form-control" type="text" placeholder="location name" ng-model="vm.location.name">
+    <input class="btn btn-success" type="submit">
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-sm btn-default" ng-click="$dismiss()">Close</button>
+</div>

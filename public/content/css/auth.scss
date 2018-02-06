@@ -1,0 +1,184 @@
+.sign-in-container {
+	min-height: 100%;
+	background: url(../images/track.jpg);
+	background-size: cover;
+	background-position: center center;
+	
+}
+
+@media screen and (max-width: 900px) {
+    .sign-in-container {
+        background-size: auto 100%;
+    }
+}
+
+
+.sign-in {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.brand-navigation {
+	padding: 20px 20px;
+	list-style-type: none;
+	li {
+		display: inline-block;
+		a {
+			text-transform: uppercase;
+			padding: 7px 20px;
+			span {
+				padding-bottom: 4px;
+			}
+			&:hover {
+				span {
+					border-bottom: 2px solid $brand-color;
+				}
+			}
+		}
+		&.active {
+			a {
+				span {
+					border-bottom: 2px solid $brand-color;
+				}
+			}
+		}
+	}
+	&.main-navigation {
+	li {
+		a {
+			color: black;
+		}
+	}
+}
+}
+
+.brand-form {
+	padding: 20px;
+	input:not([type="checkbox"]) {
+		&::-webkit-input-placeholder {color: #fff}
+		&::-moz-placeholder {color: #fff}
+		font-size: 16px;
+		width: 100%;
+		border-radius: 45px;
+		height: 45px;
+		line-height: 45px;
+		border: 2px solid transparent;
+		margin: 15px 0;
+		color: #fff;
+		&[type="submit"] {
+			background-color: $brand-color;
+			color: #fff;
+			line-height: 40px;
+			text-transform: uppercase;
+			font-size: 14px;
+			margin-top: 30px;
+			&:focus {
+				outline: none;
+			}
+		}
+		&:not([type="submit"]) {
+		background-color: rgba(255,255,255,0.5);
+		padding-left: 35px;
+		display: block;
+		
+		&:focus {
+			outline: none;
+			border: 2px solid #fff;
+
+		}
+	}
+	}
+	p {
+		color: #fff;
+		padding-left: 35px;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding-top: 5px;
+	}
+
+	.user-type {
+		height: 45px;
+		border-radius: 45px;
+		overflow: hidden;
+		background-color: rgba(255,255,255, 0.5);
+		margin-top: 30px;
+		label {
+			width: 50%;
+			height: 100%;
+			text-align: center;
+			display: inline-block;
+			float: left;
+			color: #fff;
+			line-height: 45px;
+			&.active {
+				background-color: $brand-color;
+			}
+			input {
+				display: none;
+			}
+		}
+
+
+	}
+
+	.brand-form-label {
+		background-color: rgba(255,255,255, 0.5);
+		height: 45px;
+		border-radius: 45px;
+		line-height: 45px;
+		width: 100%;
+		color: #fff;
+		cursor: pointer;
+		padding-left: 35px;
+		font-weight: normal;
+		font-size: 16px;
+
+
+		.brand-form-checkbox {
+			margin-right: 5px;
+		}
+	}
+}
+
+
+.confirm-page {
+	padding-top: 100px;
+	font-size: 18px;
+
+	.success-confirm {
+		a {
+			color: #00b3ee;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

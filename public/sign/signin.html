@@ -1,0 +1,16 @@
+<div class="brand-form">
+	<form ng-submit="vm.login(vm.credentials)">
+		<p>email</p>
+		<input type="email"
+					 ng-model="vm.credentials.email"
+					 ng-change="vm.onInputChange()"
+					 placeholder="your email here">
+		<p>password</p>
+		<input type="password"
+					 ng-model="vm.credentials.password"
+					 ng-change="vm.onInputChange()"
+					 placeholder="your password">
+		<input type="submit" value="login">
+		<p class="text-center" data-ng-if="vm.error" data-ng-bind="vm.error"></p>
+	</form>
+</div>

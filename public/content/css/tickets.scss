@@ -1,0 +1,28 @@
+.ticket-item {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid blue;
+	margin: 10px 0;
+}
+
+.tickets-block {
+	padding: 20px;
+	.ticket-thumbnail {
+		margin-bottom: 20px;
+
+		.event-image {
+			img {
+				width: 100%;
+			}
+		}
+
+		.event-title {
+
+		}
+	}
+}
+
+
+
+
+

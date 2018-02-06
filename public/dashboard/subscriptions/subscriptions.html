@@ -1,0 +1,34 @@
+<h1>subscriptions</h1>
+
+<div class="container-fluid users-dashboard-view">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span>Users</span>
+      <span>
+        <input type="text" placeholder="Search by email..." data-ng-model="vm.userSearch">
+      </span>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>User</th>
+          <th>Event</th>
+        </tr>
+        <tr data-ng-repeat="subscription in vm.subscriptions | filter: vm.filter track by subscription.id">
+          <td data-ng-bind="$index + 1"></td>
+          <td>
+            <a ui-sref="profile({id: subscription.userId})"
+               data-ng-bind="subscription.userEmail"
+            ></a>
+          </td>
+          <td>
+            <a ui-sref="event({id: subscription.eventId})"
+               data-ng-bind="subscription.eventName"
+            ></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

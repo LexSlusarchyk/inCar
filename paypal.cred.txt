@@ -1,0 +1,32 @@
+Sandbox Account
+kushpinskyy-facilitator@yahoo.com
+Access Token
+access_token$sandbox$mzb7j4jy66btvrbq$3fea52832b8e08830995f7d636ef04b5
+Expiry Date27 Aug 2026
+
+kushpinskyy-facilitator@yahoo.com
+Client ID
+AWrUM7BJJqhiaJnr8l4A9sXdgKtHlNbojTS7n0HFexh3KqfPTqm3VO0pUYa7O3uCaGYM7NuQsWLAYCZu
+Secret
+Hide
+
+Note: There can only be a maximum of two client-secrets. These client-secrets can be in either “Enabled” or “Disabled” status.
+
+Created	Secret	Status	Action
+Aug 27, 2016	
+EDz1l5qQOWk8zG8sX6TxUEmVaKQAe9PvcXjvnIs0V_x32BCbwyihAp9S67myy13tzwy7EORl09HzxAto
+
+checkout:
+
+Publishable Key:
+563F3320-0CB4-422E-BDBC-8528DBB0730F
+
+Private Key:
+375145CA-93A0-4CBC-9D65-A5346B84369C
+
+checkout sandbox:
+private
+254749FF-95DD-45B8-AF8F-88C4A568958C
+
+public
+27055284-D06B-43E0-8EE2-5585CB5E458B

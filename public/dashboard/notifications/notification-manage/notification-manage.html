@@ -1,0 +1,34 @@
+<div class="notification-manage">
+  <form>
+    <div class="row">
+      <h4 data-ng-bind="vm.pageTitle"></h4>
+      <div class="col-md-12">
+        <div class="input-group">
+          <input type="text"
+                 data-ng-model="vm.notification.title"
+                 placeholder="Notification Title"
+                 class="form-control">
+        </div>
+        <div class="input-group">
+          <textarea type="text"
+                 data-ng-model="vm.notification.text"
+                 placeholder="Notification text"
+                 class="form-control"
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <input id="disabled-checkbox" type="checkbox" ng-model="vm.notification.isActive">
+          <label for="disabled-checkbox">is active</label>
+        </div>
+      </div>
+    </div>
+  </form>
+  <button data-ng-click="vm.submit()"
+          class="btn btn-success"
+          data-ng-bind="vm.buttonText">
+  </button>
+  <button data-ng-click="vm.showRemoveModal()"
+          class="btn btn-danger"
+  >Delete</button>
+</div>

@@ -1,0 +1,27 @@
+
+.admin-item {
+  background-color: rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  position: relative;
+
+  .admin-item-image {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .admin-item-title {
+
+  }
+
+  .admin-item-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+}

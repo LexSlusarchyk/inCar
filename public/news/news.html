@@ -1,0 +1,35 @@
+<div class="news">
+  <!--<select ng-options="item as item.name for item in vm.locations track by item.id"-->
+          <!--data-ng-model="vm.selected"-->
+          <!--data-ng-change="vm.onBaseOptionChanged()">-->
+    <!--<option value=''>Choose Base Location</option>-->
+  <!--</select>-->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 cust-padding">
+        <div class="news-categories">
+          <button class="btn btn-default"
+                  data-ng-click="vm.changeActiveCategory(null)"
+                  data-ng-class="{active: vm.activeCategoryId === null}"
+          >All news</button>
+
+          <button data-ng-repeat="category in vm.categories track by category.id"
+                  data-ng-bind="category.name"
+                  data-ng-click="vm.changeActiveCategory(category.id)"
+                  data-ng-class="{active: vm.activeCategoryId === category.id}"
+                  class="btn btn-default"
+          ></button>
+        </div>
+      </div>
+      <div class="col-md-6 cust-padding">
+        <article-thumbnail data-ng-repeat="article in vm.news | filter: vm.filterFunction track by article.id"
+                           data-article="article"
+        ></article-thumbnail>
+      </div>
+      <div class="col-md-offset-1 col-md-3 no-padding">
+        <audio-item></audio-item>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="event-ticket">
+	<p ng-bind="vm.ticket.name"></p>
+	<p>Price: <span ng-bind="vm.ticket.price"></span> $</p>
+	<a class="btn btn-sm btn-primary pull-right"
+		 ui-sref="payment({ticketId: vm.ticket.id})"
+	>Buy</button>
+</div>

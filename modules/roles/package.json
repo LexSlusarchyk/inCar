@@ -1,0 +1,5 @@
+{
+  "name": "@dist/roles",
+  "main": "./module",
+  "description": "Roles module"
+}

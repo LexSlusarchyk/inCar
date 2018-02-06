@@ -1,0 +1,30 @@
+<img src="content/images/securion-logo.png" class="payment-logo">
+
+<form action="" method="post" id="payment-form">
+  <span class="payment-errors"></span>
+
+  <div class="form-group">
+    <label>
+      <span>Card Number:</span><br>
+      <input type="text" size="20" data-securionpay="number" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>
+      <span>CVC:</span><br>
+      <input type="text" size="4" data-securionpay="cvc" />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <span>Expiration (MM/YYYY):</span><br>
+    <label>
+      <input type="text" size="2" data-securionpay="expMonth" />
+    </label>
+    <span> / </span>
+    <input type="text" size="4" data-securionpay="expYear" />
+  </div>
+
+  <button type="submit">Pay</button>
+</form>

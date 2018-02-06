@@ -1,0 +1,52 @@
+<section id="home-view">
+	<div data-ng-if="vm.mainAudio" class="main-audio-wrap" back-cover="{{vm.mainAudio.wallpaper}}">
+		<a data-ng-if="vm.mainAudio.title" class="main-audio-title" ng-href="{{vm.isMainAudio.url || '#'}}">
+			<h1 data-ng-bind="vm.mainAudio.title"></h1>
+		</a>
+	</div>
+
+		<div class="container-fluid content-section">
+			<div class="row row-no-padding">
+				<div class="col-sm-8">
+					<div class="row">
+						<div class="col-sm-12">
+							<div data-notifications-list
+							></div>
+						</div>
+					</div>
+					<div class="events-grid">
+						<h1 class="main-section">Latest Events:</h1>
+						<div class="container-fluid">
+							<div class="row row-cust-padding">
+								<div class="col-md-4 col-sm-6" data-ng-repeat="event in vm.events track by event.id">
+									<event-thumbnail event="event" index="$index"><event-thumbnail>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-fluid">
+						<div class="row row-cust-padding">
+							<h1 class="main-section">News:</h1>
+							<div class="col-md-12" data-ng-repeat="article in vm.news | filter: vm.filterFunction track by article.id">
+								<article-thumbnail data-article="article"
+								></article-thumbnail>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+				<div class="col-sm-offset-1 col-sm-3">
+					<audio-item data-max-length="vm.maxLength" data-ng-if="vm.events"></audio-item>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+</section>
+

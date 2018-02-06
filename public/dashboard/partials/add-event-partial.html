@@ -1,0 +1,54 @@
+<div id="cat-form">
+	<div class="row">
+		<div class="col-md-4 cat-photo">
+			<div ng-click="triggerInput()" class="editable editable-image-container">
+				<img ng-show="event.imageUrl" ng-src="{{event.imageUrl}}">
+				<img ng-hide="event.imageUrl" src="content/images/placeholder_cropped.jpg">
+				<div class="overlay">
+					<a href="" class="btn"><span ng-hide="event.imageUrl">add image</span><span ng-show="event.imageUrl">change image</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 cat-map">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom' control='googleMap'>
+	                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id" ng-cloak></ui-gmap-marker>
+	                <ui-gmap-search-box template="searchbox.template" parentdiv="searchbox.parentdiv" events="searchbox.events"></ui-gmap-search-box>
+	        	</ui-gmap-google-map>
+        	<div id="search-input"></div>
+        	<p ng-bind='placeInfo'></p>
+		</div>
+	</div>
+
+	<div class="cat-header">
+		<form>
+			<infinite-select tree="locations"></infinite-select>
+			<div class="input-group">
+				<input ng-model="event.name" type="text" placeholder="Event Title" class="form-control">
+				<input ng-model="event.description" type="text" placeholder="Event Snippet" class="form-control">
+				<input ng-model="event.town" type="text" placeholder="Event Town" class="form-control">
+				<input ng-model="event.country" type="text" placeholder="Event Country" class="form-control">
+				<p class="input-group">
+					<input type="text" placeholder="Select Date" class="form-control" uib-datepicker-popup="{{format}}" ng-model="event.date" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" />
+					<span class="input-group-btn">
+		            	<button type="button" class="btn btn-default" ng-click="openDatepicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+		        	</span>
+	        	</p>
+			</div>
+			<div uib-timepicker ng-model="event.date" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+
+			<button class="btn btn-primary" ng-click="openTicketCreateModal()">Add ticket</button>
+			<div class="row">
+				<div ng-repeat="ticket in event.tickets track by $index" class="col-md-3">
+					<ticket-item ticket="ticket" index="$index"></ticket-item>
+				</div>
+			</div>
+			<div class="cat-article">
+				<summer text="event.text"></summer>
+			</div>
+		</form>
+	</div>
+	
+	
+	<button ng-click="saveEvent(event)" class="btn btn-success">Save Event</button>
+	<input type="file" id='photo-input' onchange="angular.element(this).scope().onFile(this.files[0])">
+</div>

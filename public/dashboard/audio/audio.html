@@ -1,0 +1,12 @@
+<a ui-sref="dashboard.createAd" class="btn btn-default main-add-btn">Create Ad</a>
+
+<div class="audio-block">
+  <div class="admin-items-grid">
+    <admin-item ng-repeat="audio in vm.ads track by $index"
+                data-item-id="audio.id"
+                image="audio.imgUrl || audio.wallpaper"
+                data-name="audio.title"
+                actions="vm.actionsConfig"
+    ></admin-item>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+{
+  "name": "@dist/geography",
+  "main": "./module",
+  "description": "Geography module"
+}

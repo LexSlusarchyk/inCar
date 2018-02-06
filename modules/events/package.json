@@ -1,0 +1,5 @@
+{
+  "name": "@dist/events",
+  "main": "./module",
+  "description": "Events module"
+}

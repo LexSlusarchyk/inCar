@@ -1,0 +1,5 @@
+{
+  "name": "@dist/media",
+  "main": "./module",
+  "description": "Media module"
+}

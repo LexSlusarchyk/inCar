@@ -1,0 +1,5 @@
+{
+  "name": "@dist/users",
+  "main": "./module",
+  "description": "Users module"
+}

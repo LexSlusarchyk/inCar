@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="lnd" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="lnd" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="lnd" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="lnd" class="no-js"> <!--<![endif]-->
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="4KPE4ywIxpA0TGjqoBp_7N9gTV57pWDbJ4WWZxz1zgM" />
+  <meta name="google-site-verification" content="taYLG9Y3eC2eLTmYeAGzW0DH9Uk2xa4TUROgP2QeFto" />
+  <link rel="shortcut icon" href="#" />
+  <!--<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">-->
+  <title>InCAR</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap.csp.css"> -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css">
+  <link href="bower_components/ng-cropper/dist/ngCropper.all.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="app.css"> -->
+  <link rel="stylesheet" href="content/css/style.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <!-- <div class="content-container"> -->
+    <div class="wrapper" slide ng-controller='BaseController as vm'>
+
+      <div class="content-block">
+        <header>
+          <!--<a class="logo" ui-sref="home"><img src="content/images/logo_dt.svg"></a>-->
+          <a class="logo" ui-sref="home"><img src="content/images/incar-logo.png"></a>
+          <a href="" class="menu-button slide-menu-button"><i class="fa fa-bars"></i></a>
+          <!--<a href="" class="menu-button slide-search-button"><i class="fa fa-search"></i></a>-->
+          <div class="header-navigation">
+            <ul>
+              <li><a href="" class="menu-button-events">Events</a></li>
+              <li><a ui-sref="news">News</a></li>
+              <li><a ui-sref="texts({id: 'contact'})">Contact Us</a></li>
+              <li data-ng-if="vm.usersService.data.userData.email">
+                <a ui-sref="profile({id: vm.usersService.data.userData.id})">Profile</a>
+              </li>
+              <li><a ui-sref="texts({id: 'about'})">About</a></li>
+              <li><a ui-sref="texts({id: 'faq'})">FAQ</a></li>
+              <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
+                <a ui-sref="dashboard.events">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+          <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header">
+            <span>Sign In</span>
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+          </a>
+
+          <a data-ng-if="vm.usersService.data.userData" data-ng-click="vm.signOut()" class="sign-in-header">
+            <span>Sign Out</span>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </header>
+        <div ui-view class="viewport"></div>
+        <div class="overlay"></div>
+        <footer class="main-footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="copyright text-center">
+                  <p>© InCar 2017</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="texts-links text-center">
+                  <ul>
+                    <li><a ui-sref="texts({id: 'terms'})">Site terms</a></li>
+                    <li><a ui-sref="texts({id: 'privacy'})">Privacy policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <nav class="slide-menu">
+        <div class="slide-menu-content">
+          <smart-navigation tree="vm.tree" active-cat="vm.activeCat"><smart-navigation>
+        </div>
+      </nav>
+
+    </div>
+   <!-- </div> -->
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  
+
+  
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://securionpay.com/js/securionpay.js"></script>
+<!-- 
+  <script src="bower_components/cropper/dist/cropper.js"></script>
+ -->
+  <script src="bower_components/summernote/dist/summernote.min.js"></script>
+
+  <script src="bower_components/braintree-web/client.js"></script>
+
+  <!-- Load additional components if desired. -->
+  <script src="bower_components/braintree-web/hosted-fields.js"></script>
+  <script src="bower_components/braintree-web/paypal.js"></script>
+  <script src="bower_components/braintree-web/data-collector.js"></script>
+
+  
+  <script src='http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&language=en&v=3.20'></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/ng-cropper/dist/ngCropper.all.js"></script>
+  <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+  <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-summernote/dist/angular-summernote.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/chance/dist/chance.min.js"></script>
+  <script src="bower_components/shave/dist/jquery.shave.min.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+  <script src="app.js"></script>
+
+  <script src="Services/globalService.js"></script>
+  <script src="Services/categoriesService.js"></script>
+  <script src="Services/usersService.js"></script>
+  <script src="Services/eventsService.js"></script>
+  <script src="Services/modalService.js"></script>
+  <script src="Services/confirmService.js"></script>
+  <script src="Services/cropperService.js"></script>
+  <script src="Services/mediaService.js"></script>
+  <script src="Services/paymentService.js"></script>
+  <script src="Services/geographyService.js"></script>
+  <script src="Services/newsService.js"></script>
+  <script src="Services/audioService.js"></script>
+  <script src="Services/textsService.js"></script>
+
+  <script src="Directives/slideDirective.js"></script>
+  <script src="Directives/smartNavigationDirective.js"></script>
+  <script src="Directives/catTreeIndentedDirective.js"></script>
+  <script src="Directives/selectImageDirective.js"></script>
+  <script src="Directives/ticketItemDirective.js"></script>
+  <script src="Directives/eventTicketDirective.js"></script>
+  <script src="Directives/eventThumbnailDirective.js"></script>
+  <script src="Directives/readMarkupDirective.js"></script>
+  <script src="Directives/adminItemDirective.js"></script>
+  <script src="Directives/audioDirective.js"></script>
+  <script src="Directives/backCoverDirective.js"></script>
+
+  <script src="core/auth-interceptor/auth-interceptor.service.js"></script>
+  <script src="core/auth-interceptor/auth-interceptor.config.js"></script>
+
+  <script src="baseController.js"></script>
+  <script src="croppController.js"></script>
+
+  <script src="home/home.route.js"></script>
+  <script src="home/home.controller.js"></script>
+
+  <script src="texts/texts.route.js"></script>
+  <script src="texts/texts.controller.js"></script>
+
+  <script src="events/events.route.js"></script>
+  <script src="events/events.controller.js"></script>
+
+  <script src="event/event.route.js"></script>
+  <script src="event/event.controller.js"></script>
+
+  <script src="payment/payment.route.js"></script>
+  <script src="payment/payment.controller.js"></script>
+
+  <script src="payment/paypal/paypal.route.js"></script>
+  <script src="payment/paypal/paypal.controller.js"></script>
+
+  <script src="payment/securion/securion.route.js"></script>
+  <script src="payment/securion/securion.controller.js"></script>
+
+  <script src="payment/pokupo/pokupo.route.js"></script>
+  <script src="payment/pokupo/pokupo.controller.js"></script>
+
+  <script src="profile/profile.route.js"></script>
+  <script src="profile/profile.controller.js"></script>
+
+  <script src="profile/edit/edit-profile.route.js"></script>
+  <script src="profile/edit/edit-profile.controller.js"></script>
+
+  <script src="tickets/tickets.route.js"></script>
+  <script src="tickets/tickets.controller.js"></script>
+
+  <script src="layout/modals/cat-manage-modal/catCreateModal.js"></script>
+  <script src="layout/modals/cat-manage-modal/catEditModal.js"></script>
+  <script src="layout/modals/cat-manage-modal/newsCatCreateModal.js"></script>
+  <script src="layout/modals/cat-manage-modal/newsCatEditModal.js"></script>
+
+  <script src="layout/modals/confirm-modal/confirmModalController.js"></script>
+  <script src="layout/modals/alert-modal/alert-modal.controller.js"></script>
+  <script src="layout/modals/rules-confirm-modal/rules-confirm-modal-controller.js"></script>
+  <script src="layout/modals/ticket-manage-modal/ticketCreateModal.js"></script>
+
+  <script src="layout/modals/country-manage-modal/countryCreateModal.js"></script>
+  <script src="layout/modals/country-manage-modal/countryEditModal.js"></script>
+
+  <script src="layout/infinite-select/infinite-select.directive.js"></script>
+  <script src="layout/summer/summer.js"></script>
+
+  <script src="layout/notification/notification.directive.js"></script>
+  <script src="layout/truncate/truncate.directive.js"></script>
+
+
+  <script src="sign/sign.js"></script>
+
+  <script src="news/news.route.js"></script>
+  <script src="news/news.controller.js"></script>
+  <script src="news/article-thumbnail/article-thumbnail.directive.js"></script>
+
+  <script src="article/article.route.js"></script>
+  <script src="article/article.controller.js"></script>
+
+  <script src="email-confirm/email-confirm.route.js"></script>
+  <script src="email-confirm/email-confirm.controller.js"></script>
+
+  <script src="search/search.js"></script>
+
+  <script src="dashboard/dashboard.route.js"></script>
+  <script src="dashboard/dashboard.controller.js"></script>
+  <script src="dashboard/categories/categories.route.js"></script>
+  <script src="dashboard/categories/categories.controller.js"></script>
+  <script src="dashboard/events/events.route.js"></script>
+  <script src="dashboard/events/events.controller.js"></script>
+  <script src="dashboard/events/event-manage/create-event/create-event.route.js"></script>
+  <script src="dashboard/events/event-manage/create-event/create-event.controller.js"></script>
+  <script src="dashboard/events/event-manage/edit-event/edit-event.route.js"></script>
+  <script src="dashboard/events/event-manage/edit-event/edit-event.controller.js"></script>
+
+
+  <script src="dashboard/locations/locations-tree.directive.js"></script>
+
+  <script src="dashboard/locations/locations.route.js"></script>
+  <script src="dashboard/locations/locations.controller.js"></script>
+
+  <script src="dashboard/news/news.route.js"></script>
+  <script src="dashboard/news/news.controller.js"></script>
+
+  <script src="dashboard/news/article-manage/create/create-article.route.js"></script>
+  <script src="dashboard/news/article-manage/create/create-article.controller.js"></script>
+
+  <script src="dashboard/news/article-manage/edit/edit-article.route.js"></script>
+  <script src="dashboard/news/article-manage/edit/edit-article.controller.js"></script>
+
+  <script src="dashboard/subscriptions/subscriptions.route.js"></script>
+  <script src="dashboard/subscriptions/subsctiptions.controller.js"></script>
+
+  <script src="dashboard/audio/audio.route.js"></script>
+  <script src="dashboard/audio/audio.controller.js"></script>
+
+  <script src="dashboard/audio/audio-manage/edit/edit-audio.route.js"></script>
+  <script src="dashboard/audio/audio-manage/edit/edit-audio.controller.js"></script>
+
+  <script src="dashboard/texts/texts.route.js"></script>
+  <script src="dashboard/texts/texts.controller.js"></script>
+
+  <script src="dashboard/users/users.route.js"></script>
+  <script src="dashboard/users/users.controller.js"></script>
+
+
+  <script src="dashboard/audio/audio-manage/create/create-audio.route.js"></script>
+  <script src="dashboard/audio/audio-manage/create/create-audio.controller.js"></script>
+
+  <script src="dashboard/notifications/notifications.route.js"></script>
+  <script src="dashboard/notifications/notifications.controller.js"></script>
+  <script src="dashboard/notifications/notifications.service.js"></script>
+
+  <script src="dashboard/notifications/data-models/Notification.js"></script>
+  <script src="dashboard/notifications/data-models/NotificationsList.js"></script>
+
+  <script src="dashboard/notifications/notification-manage/notification-manage.route.js"></script>
+  <script src="dashboard/notifications/notification-manage/notification-manage.controller.js"></script>
+
+</body>
+</html>

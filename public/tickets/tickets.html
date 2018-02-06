@@ -1,0 +1,19 @@
+<div class='tickets-block'>
+	<div ng-repeat="ticket in vm.tickets track by $index" class="ticket-thumbnail">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="event-image">
+					<img ng-src="{{ticket.eventImgUrl}}">
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div class="event-title">
+					<h2 ng-bind="ticket.eventName"></h2>
+					<h4 ng-bind="ticket.name"></h4>
+					<h3 ng-bind="ticket.date"></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

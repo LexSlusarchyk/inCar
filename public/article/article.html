@@ -1,0 +1,28 @@
+<div class="event">
+  <div class="container-fluid">
+    <div class="row row-no-padding">
+      <div class="col-md-9">
+        <div class="event-block">
+          <div class="row row-no-padding">
+            <div class="col-md-3">
+              <div class="event-image">
+                <img ng-src="{{vm.article.imgUrl}}">
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="event-header">
+                <h2 ng-bind="vm.article.title"></h2>
+              </div>
+            </div>
+          </div>
+          <div class="event-text">
+            <read-markup data-markup="vm.article.text"></read-markup>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <audio-item></audio-item>
+      </div>
+    </div>
+  </div>
+</div>

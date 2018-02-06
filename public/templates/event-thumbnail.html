@@ -1,0 +1,24 @@
+<div class="event-thumbnail">
+	<div class="event-thumbnail-image">
+		<img data-ng-src="{{vm.event.imageUrl}}" data-ng-if="vm.event.imageUrl">
+		<img src="content/images/16x10_default.jpeg" data-ng-if="!vm.event.imageUrl">
+		<a ui-sref="events({id: vm.event.catId})"
+			 data-ng-if="vm.event.catId"
+			 class="event-thumbnail-cat-label"
+			 data-ng-bind="vm.event.cat"
+		></a>
+	</div>
+	<div class="event-thumbnail-title">
+		<a ui-sref="event({'id': vm.event.id})"><h3 data-ng-bind="vm.event.name" title="vm.event.name"></h3></a>
+	</div>
+	<div class="event-thumbnail-footer">
+		<div data-ng-if="vm.event.date" class="event-thumbnail-date">
+			<i class="fa fa-calendar-o" aria-hidden="true"></i>
+			<span data-ng-bind="vm.formatEventDate()"></span>
+		</div>
+	</div>
+</div>
+
+
+
+

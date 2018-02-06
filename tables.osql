@@ -1,0 +1,120 @@
+CREATE TABLE CATS (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(400), 
+parent INT(6),
+);
+
+CREATE TABLE `LND`.`users` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(400) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `imageurl` VARCHAR(400) NULL,
+  `firstname` VARCHAR(400) NULL,
+  `lastname` VARCHAR(400) NULL,
+  `country` VARCHAR(400) NULL,
+  `gender` VARCHAR(100) NULL,
+  `age` INT(10) NULL,
+  `createdat` VARCHAR(40) NULL,
+  `role` VARCHAR(100) NULL,
+  `version` INT(100) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
+
+CREATE TABLE `LND`.`events` (
+  `id` INT UNSIGNED AUTO_INCREMENT,
+  `name` VARCHAR(400) NOT NULL,
+  `imageUrl` VARCHAR(400) NULL,
+  `description` LONGTEXT NULL,
+  `country` VARCHAR(400) NULL,
+  `town` VARCHAR(400) NULL,
+  `latitude` DECIMAL(9,6) NULL,
+  `longitude` DECIMAL NULL,
+  `fullAddress` VARCHAR(1000) NULL,
+  `catId` VARCHAR(1000) NULL,
+  `date` INT(12) NULL,
+  `text` LONGTEXT NULL,
+  `time` VARCHAR(40) NULL,
+  `version` INT(100) NULL,
+  PRIMARY KEY (`id`)),
+  FOREIGN KEY (`catId`) REFERENCES categories (`id`))
+
+CREATE TABLE `LND`.`tickets` (
+  `id` INT UNSIGNED AUTO_INCREMENT,
+  `eventid` INT UNSIGNED,
+  `name` VARCHAR(400) NOT NULL,
+  `eventimageurl` VARCHAR(400) NULL,
+  `eventname` LONGTEXT NULL,
+  `price` VARCHAR(400) NULL,
+  `version` INT(100) NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`eventid`) REFERENCES events (`id`))
+
+CREATE TABLE `LND`.`boughttickets` (
+  `id` INT UNSIGNED AUTO_INCREMENT,
+  `eventId` INT UNSIGNED,
+  `ticketId` VARCHAR(400) NOT NULL,
+  `ticketName` VARCHAR(400) NOT NULL,
+  `eventImageUrl` VARCHAR(400) NULL,
+  `eventName` LONGTEXT NULL,
+  `price` VARCHAR(400) NULL,
+  `version` INT(100) NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`eventid`) REFERENCES events (`id`))
+
+CREATE TABLE `LND`.`geography` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(145) NULL,
+  `parent` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC));
+
+CREATE TABLE `LND`.`newscats` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC));
+
+CREATE TABLE `LND`.`news` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(1000) NULL,
+  `catId` INT NOT NULL,
+  `snippet` VARCHAR(2000) NULL,
+  `date` DATE NULL,
+  `imgUrl` VARCHAR(1000) NULL,
+  `location` INT(11) NULL,
+  `text` LONGTEXT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+
+CREATE TABLE `ebdb`.`ads` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(1000) NULL,
+  `catId` VARCHAR(11) NULL,
+  `imgUrl` VARCHAR(500) NULL,
+  `wallpaper` VARCHAR(500) NULL,
+  `priority` INT(5) NULL,
+  `location` INT(11) NULL,
+  `baseLocation` INT(11) NULL,
+  `isMainAd` TINYINT(1) NULL,
+  `disabled` TINYINT(1) NULL,
+  `url` VARCHAR(500) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+
+
+CREATE TABLE `LND`.`texts` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(45) NOT NULL,
+  `markup` LONGTEXT NULL,
+  PRIMARY KEY (`id`));
+
+  ALTER TABLE `LND`.`users`
+  ADD COLUMN `region` VARCHAR(400) NULL AFTER `version`;
+
+
+ALTER TABLE `LND`.`users`
+CHANGE COLUMN `country` `country` INT NULL DEFAULT NULL ,
+CHANGE COLUMN `region` `region` INT NULL DEFAULT NULL ;

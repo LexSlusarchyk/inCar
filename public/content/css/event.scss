@@ -1,0 +1,145 @@
+.event {
+	padding: 16px 8px;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.event-block {
+		padding: 0 8px;
+		text-align: justify;
+
+		.event-image {
+			width: 100%;
+			padding: 0 15px;
+			img {
+				width: 100%;
+				border-radius: 4px;
+			}
+		}
+
+		.event-header {
+			h2 {
+				padding: 0 5px 10px 5px;
+				margin: 0;
+				font-family: Montserrat, sans-serif;
+			}
+		}
+
+		.event-ticket {
+			padding: 15px;
+			box-shadow: -2px 4px 30px 0 rgba(103, 122, 141, 0.17);
+			margin: 15px 0;
+			border-radius: 4px;
+			color: #4d4d4d;
+			overflow: hidden;
+		}
+
+		.event-text {
+			padding: 15px 30px;
+		}
+	}
+
+	.row-cust-padding > [class*="col-"] {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+}
+
+.event-tickets {
+	display: block;
+	padding: 0 8px;
+}
+
+#events-view {
+	padding: 16px 8px 0 8px;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.row-cust-padding > [class*="col-"] {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+
+	.event-dashboard-thumb {
+		margin-bottom: 16px;
+	}
+
+}
+
+.events-grid {
+
+}
+
+.event-thumbnail {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: -2px 4px 30px 0 rgba(103, 122, 141, 0.17);
+	padding-bottom: 55px;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	font-family: Montserrat, sans-serif;
+
+
+	.event-thumbnail-image {
+		position: relative;
+		height: 100%;
+
+		.event-thumbnail-cat-label {
+			display: block;
+			position: absolute;
+			padding: 3px 7px;
+			max-width: 300px;
+			overflow: hidden;
+			top: 15px;
+			left: 15px;
+			background-color: $brand-color;
+			border-radius: 4px;
+			color: #fff;
+		}
+
+		img {
+			width: 100%;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+	}
+
+	.event-thumbnail-title {
+		height: 63px;
+		overflow: hidden;
+		padding: 10px;
+
+		h3 {
+			padding: 0;
+			margin: 0;
+			&:hover {
+				color: $brand-color;
+			}
+		}
+	}
+
+	.event-thumbnail-footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 55px;
+		width: 100%;
+		line-height: 55px;
+
+		.event-thumbnail-date {
+			padding: 0 23px;
+			text-transform: capitalize;
+			color: #686869;
+			font-weight: bold;
+
+			i {
+				color: #B33D04;
+			}
+		}
+
+
+	}
+}
+
+
+	

@@ -1,0 +1,33 @@
+<div class="article-manage">
+  <form>
+    <div class="row">
+      <div class="col-md-4">
+        <select-image data-image="vm.article.imgUrl" data-editable="true"></select-image>
+      </div>
+      <div class="col-md-8">
+        <infinite-select data-tree="vm.locations"
+                         data-selected-options-list="vm.selectedLocations"
+        ></infinite-select>
+
+        <div class="input-group">
+          <input type="text"
+                 data-ng-model="vm.article.title"
+                 placeholder="Article Title"
+                 class="form-control">
+        </div>
+
+        <div class="input-group">
+          <textarea data-ng-model="vm.article.snippet"
+                    placeholder="Article Description"
+                    class="form-control">
+          </textarea>
+        </div>
+      </div>
+    </div>
+    <summer text="vm.article.text"></summer>
+  </form>
+  <button data-ng-click="vm.manageArticle()"
+          class="btn btn-success"
+          data-ng-bind="vm.buttonText">
+  </button>
+</div>

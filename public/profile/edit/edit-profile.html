@@ -1,0 +1,36 @@
+<div class="edit-profile">
+	<h2>Edit profile</h2>
+	<div class="edit-profile-form">
+		<form ng-submit="vm.updateUser(vm.user)">
+			<div class="input-group">
+				<p>Email</p>
+				<input type="email" ng-model="vm.user.email" class="form-control" placeholder="email">
+				<p>First Name</p>
+
+				<input type="text" ng-model="vm.user.firstname" class="form-control" placeholder="first name">
+				<p>Last Name</p>
+				<input type="text" ng-model="vm.user.lastname" class="form-control" placeholder="last name">
+				<p>Location</p>
+
+				<infinite-select data-tree="vm.locations"
+												 data-selected-options-list="vm.selectedLocations"
+												 data-config="vm.multiselectConfig"
+												 data-ng-if="vm.multiselectConfig"
+				></infinite-select>
+
+				<input type="text" ng-model="vm.user.country" class="form-control" placeholder="country">
+				<p>Gender</p>
+				<select ng-model="vm.user.gender">
+					<option value="male">Male</option>
+					<option value="female">female</option>
+				</select>
+				<p>Age</p>
+				<input type="number" ng-model="vm.user.age" class="form-control">
+				<input type="text" ng-model="vm.user.physicalAddress" placeholder="physical address" class="form-control">
+				<input type="submit" value="save changes" class="btn btn-success">
+			</div>
+		</form>
+	</div>
+</div>
+
+

@@ -1,0 +1,9 @@
+<div class="audio-wrap">
+  <div data-ng-repeat="audio in vm.audios" class="audio-item">
+    <a ng-href="{{audio.url}}" class="audio-image-box">
+      <img data-ng-src="{{audio.imgUrl}}">
+      <div class="audio-overlay"></div>
+    </a>
+    <h3 class="audio-title" data-ng-bind="audio.title"></h3>
+  </div>
+</div>

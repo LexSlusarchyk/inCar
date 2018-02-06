@@ -1,0 +1,56 @@
+	
+	.cat-list-item {
+		overflow: hidden;
+		a {
+			font-size: 20px;
+	    	line-height: 30px;
+	    	&.btn-sm {
+				font-size: 12px;
+		    	line-height: 1.5;
+			}
+		}
+
+		.filter-button {
+			&.active {
+				background-color: $brand-color;
+				color: #fff;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	
+	
+
+	.deepness1 {
+		margin-left: 30px;
+	}
+	.deepness2 {
+		margin-left: 60px;
+	}
+	.deepness3 {
+		margin-left: 90px;
+	}
+	.deepness4 {
+		margin-left: 120px;
+	}
+	.deepness5 {
+		margin-left: 150px;
+	}
+	
+	.smaller {
+		.deepness1 {
+			margin-left: 10px;
+		}
+		.deepness2 {
+			margin-left: 20px;
+		}
+		.deepness3 {
+			margin-left: 30px;
+		}
+		.deepness4 {
+			margin-left: 40px;
+		}
+		.deepness5 {
+			margin-left: 50px;
+		}
+	}

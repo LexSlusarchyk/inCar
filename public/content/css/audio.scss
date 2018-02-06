@@ -1,0 +1,53 @@
+.audio-wrap {
+  padding: 0 8px;
+
+  .audio-item {
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 16px;
+
+    &:hover {
+      cursor: pointer;
+      .audio-title {
+        color: #ff8c00;
+        bottom: 20px;
+      }
+
+      .audio-image-box {
+        .audio-overlay {
+          background-color: rgba(0,0,0,0.7);
+        }
+      }
+    }
+
+    .audio-image-box {
+      position: relative;
+      display: block;
+
+      img {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .audio-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 4px;
+      }
+    }
+
+    .audio-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 18px;
+      color: #fff;
+      transition: bottom 0.5s;
+    }
+  }
+}

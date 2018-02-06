@@ -1,0 +1,27 @@
+<div class="article-thumbnail">
+  <div class="row cust-padding">
+    <div class="col-md-3 cust-padding">
+      <div class="article-thumbnail-image">
+        <img data-ng-src="{{vm.article.imgUrl}}" data-ng-if="vm.article.imgUrl">
+        <img src="/content/images/square_default.jpeg" data-ng-if="!vm.article.imgUrl">
+      </div>
+    </div>
+    <div class="col-md-9s cust-padding">
+      <div class="article-thumbnail-block">
+        <a ui-sref="article({id: vm.article.id})" class="article-thumbnail-header">
+          <h3 data-ng-bind="vm.article.title" title="{{vm.article.title}}"></h3>
+        </a>
+        <div class="article-thumbnail-body">
+          <p data-ng-bind="vm.article.snippet"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="article-thumbnail-footer">
+    <div class="article-thumbnail-date">
+      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+      <span data-ng-bind="vm.formatArticleDate()"></span>
+    </div>
+  </div>
+</div>
+

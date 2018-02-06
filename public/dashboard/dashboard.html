@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="list-group dashboard-navigation">
+					<li class="list-group-item"><a ui-sref="dashboard.categories">Categories</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.events">Events</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.locations">Locations</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.news">News</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.ads">Ads</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.texts({type: 'about'})">Texts</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.users">Users</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.subscriptions">Subscriptions</a></li>
+					<li class="list-group-item"><a ui-sref="dashboard.notifications">Notifications</a></li>
+				</ul>
+			</div>
+			<div class="col-md-9">
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+</div>

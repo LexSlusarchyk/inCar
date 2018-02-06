@@ -1,0 +1,111 @@
+
+.profile-block {
+	.select-image-overlay {
+		border-radius: 50%;
+	}
+
+	.profile-photo {
+		display: inline-block;
+		float: left;
+		overflow: hidden;
+		width: 200px;
+		height: 200px;
+		padding: 20px;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	
+
+	.profile-header {
+
+		.profile-info {
+			display: inline-block;
+			padding: 50px 0;
+			font-size: 16px;
+			overflow: hidden;
+
+			.profile-user-email {
+				font-style: italic;
+			}
+
+			.profile-user-name {
+				font-weight: 600;
+			}
+
+			.btn {
+				margin-right: 10px;
+			}
+		}
+		
+		.other-profile-data {
+			font-size: 17px;
+			padding: 60px 15px;
+			text-align: center;
+			p {
+				display: inline-block;
+				font-weight: 700;
+				margin-left: 15px;
+
+				span {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+
+	.users-events {
+		.col-xs-4 {
+			padding: 0;
+		}
+		.event-thumbnail-image {
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: relative;
+
+			img {
+				width: 100%;
+			}
+
+			&:hover {
+				.overlay {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+.edit-profile {
+	margin: 0 auto;
+	max-width: 520px;
+	padding: 20px;
+	.edit-profile-form {
+
+		p {
+			font-style: italic;
+		}
+
+		select {
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		.input-group {
+			width: 100%;
+
+			.form-control {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+	
+
+
+

@@ -1,0 +1,83 @@
+.dashboard-container {
+	padding-top: 10px;
+
+	.dashboard-navigation {
+		li {
+			&:hover {
+				background-color: rgba(0,0,0,0.2);
+			}
+			cursor: pointer;
+		}
+
+		a {
+			color: #666666;
+			width: 100%;
+			display: block;
+		}
+	}
+
+	.btn.main-add-btn {
+		margin-bottom: 10px;
+	}
+
+	
+	.subcat {
+		// display: none;
+	}
+
+	.deepness1 {
+		margin-left: 30px;
+	}
+	.deepness2 {
+		margin-left: 60px;
+	}
+	.deepness3 {
+		margin-left: 90px;
+	}
+	.deepness4 {
+		margin-left: 120px;
+	}
+	.deepness5 {
+		margin-left: 150px;
+	}
+
+	.input-group {
+		label {
+			margin-left: 10px;
+		}
+	}
+
+	.timepicker {
+		input {
+			min-width: auto;
+		}
+	}
+
+	select, .form-control {
+		margin-bottom: 10px;
+	}
+
+	.form-control {
+		min-width: 260px;
+	}
+
+	textarea {
+		&.form-control {
+			min-height: 160px;
+		}
+	}
+
+ select {
+	 border: 1px solid #ccc;
+	 padding: 5px 10px;
+	 background-color: transparent;
+	 -webkit-appearance: none;
+	 min-width: 260px;
+ }
+
+	.select-image-container {
+		margin-bottom: 15px;
+	}
+
+
+}

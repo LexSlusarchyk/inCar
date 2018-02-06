@@ -1,0 +1,32 @@
+{
+  "name": "lnd-app",
+  "version": "1.0.0",
+  "description": "cool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "&&"
+  },
+  "author": "komix",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.9.0",
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "braintree": "^1.41.0",
+    "express": "^4.13.4",
+    "express-myconnection": "^1.0.4",
+    "express-validator": "^2.20.8",
+    "jsonwebtoken": "^7.1.9",
+    "mysql": "^2.11.1",
+    "node-uuid": "^1.4.7",
+    "nodemailer": "^4.0.1",
+    "require-alias": "^1.0.5",
+    "securionpay": "^1.0.0",
+    "shortid": "^2.2.6",
+    "underscore": "^1.8.3",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {}
+}

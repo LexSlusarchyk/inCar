@@ -1,0 +1,50 @@
+<div class="ad-manage">
+  <form>
+    <div class="row">
+      <div class="col-md-4">
+        <select-image image="vm.ad.imgUrl" editable="true" config="vm.cropperConfig"></select-image>
+      </div>
+      <div class="col-md-8">
+        <div class="location-select">
+          <p>Location:</p>
+          <infinite-select data-tree="vm.locations"
+                           data-selected-options-list="vm.selectedLocations"
+                           data-config="vm.multiselectConfig"
+                           data-ng-if="vm.multiselectConfig"
+          ></infinite-select>
+        </div>
+        <div class="input-group">
+          <input type="text"
+                 data-ng-model="vm.ad.title"
+                 placeholder="Ad Title"
+                 class="form-control">
+        </div>
+        <div class="input-group">
+          <input type="text"
+                 data-ng-model="vm.ad.url"
+                 placeholder="Ad Url"
+                 class="form-control">
+        </div>
+
+        <div class="input-group">
+          <input id="disabled-checkbox" type="checkbox" ng-model="vm.ad.isDisabled">
+          <label for="disabled-checkbox">Disable</label>
+        </div>
+
+        <div class="input-group">
+          <input id="main-ad-checkbox" type="checkbox" ng-model="vm.ad.isMainAd">
+          <label for="main-ad-checkbox">Main Ad</label>
+        </div>
+
+        <div data-ng-if="vm.ad.isMainAd" class="choose-wallpaper">
+          <select-image image="vm.ad.wallpaper" editable="true" config="vm.wallCropperConfig"></select-image>
+        </div>
+
+      </div>
+    </div>
+  </form>
+  <button data-ng-click="vm.manageAd()"
+          class="btn btn-success"
+          data-ng-bind="vm.buttonText">
+  </button>
+</div>

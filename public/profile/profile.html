@@ -1,0 +1,41 @@
+<div class="profile-block">
+	<div class="profile-header">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="profile-photo">
+					<select-image image="vm.image" editable="vm.editableImage"></select-image>
+				</div>
+				<div class="profile-info">
+					<p ng-bind="vm.user.email" class="profile-user-email"></p>
+					<p class="profile-user-name"><span ng-bind="vm.user.firstname"></span> <span ng-bind="vm.user.lastname"></span></p>
+					<a ui-sref="editprofile({id: vm.user.id})" class="btn btn-default pull-right">Edit</a>
+					<button class="btn btn-default pull-right" data-ng-click="vm.signOut()">Sign Out</button>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="other-profile-data">	
+					<p ng-show="vm.countryLabel">Country: <span ng-bind="vm.countryLabel"></span></p>
+					<p ng-show="vm.user.age">Age: <span ng-bind="vm.user.age"></span></p>
+					<p ng-show="vm.user.gender">Gender: <span ng-bind="vm.user.gender"></span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="users-events">
+		<div class="container-fluid">
+			<div class="row row-cust-padding">
+				<div class="col-md-3 col-sm-4" data-ng-repeat="event in vm.events track by $index">
+					<event-thumbnail event="event" index="$index"><event-thumbnail>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+
+
+
+

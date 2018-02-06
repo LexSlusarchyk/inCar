@@ -1,0 +1,98 @@
+<div id="cat-form">
+  <div class="row">
+    <div class="col-md-4">
+      <select-image image="vm.event.imageUrl" editable="true" config="vm.cropperConfig"></select-image>
+    </div>
+    <div class="col-md-8 cat-map">
+      <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' control='vm.googleMap'>
+        <ui-gmap-marker coords="vm.marker.coords"
+                        options="vm.marker.options"
+                        events="vm.marker.events"
+                        idkey="vm.marker.id"
+                        ng-cloak
+        ></ui-gmap-marker>
+        <ui-gmap-search-box template="vm.searchbox.template"
+                            parentdiv="vm.searchbox.parentdiv"
+                            events="vm.searchbox.events"
+        ></ui-gmap-search-box>
+      </ui-gmap-google-map>
+      <div id="search-input"></div>
+      <p ng-bind='vm.placeInfo'></p>
+    </div>
+  </div>
+
+  <div class="cat-header">
+    <form>
+      <infinite-select tree="vm.locations"
+                       data-selected-options-list="vm.selectedLocations"
+                       data-ng-if="vm.multiselectConfig"
+                       data-config="vm.multiselectConfig"
+      ></infinite-select>
+      <div class="input-group">
+        <input ng-model="vm.event.name" type="text" placeholder="Event Title" class="form-control">
+        <input ng-model="vm.event.description" type="text" placeholder="Event Snippet" class="form-control">
+        <p class="input-group">
+          <input type="text"
+                 placeholder="Select Date"
+                 class="form-control" uib-datepicker-popup="{{vm.format}}"
+                 ng-model="vm.event.date"
+                 is-open="vm.popup1.opened"
+                 datepicker-options="vm.dateOptions"
+                 close-text="Close" />
+					<span class="input-group-btn">
+		            	<button type="button"
+                          class="btn btn-default"
+                          ng-click="vm.openDatepicker()">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                  </button>
+          </span>
+        </p>
+      </div>
+      <div uib-timepicker ng-model="vm.event.date"
+           ng-change="vm.onTimepickerChange()"
+           hour-step="vm.timepickerConfig.hstep"
+           minute-step="vm.timepickerConfig.mstep"
+           show-meridian="vm.timepickerConfig.ismeridian"
+           class="timepicker"
+      ></div>
+
+      <button class="btn btn-default main-add-btn"
+              ng-click="vm.openTicketCreateModal()"
+              ng-show="vm.editEventView"
+      >Add ticket</button>
+      <div class="row">
+        <div ng-repeat="ticket in vm.event.tickets track by $index" class="col-md-3">
+          <ticket-item ticket="ticket" index="$index"></ticket-item>
+        </div>
+      </div>
+      <div class="cat-article">
+        <summer text="vm.event.text"></summer>
+      </div>
+    </form>
+
+    <div class="panel-body">
+      <table class="table">
+        <tr>
+          <th>#</th>
+          <th>User</th>
+          <th>Event</th>
+        </tr>
+        <tr data-ng-repeat="subscription in vm.subscriptions | filter: vm.filter track by subscription.id">
+          <td data-ng-bind="$index + 1"></td>
+          <td>
+            <a ui-sref="profile({id: subscription.userId})"
+               data-ng-bind="subscription.userEmail"
+            ></a>
+          </td>
+          <td>
+            <a ui-sref="event({id: subscription.eventId})"
+               data-ng-bind="subscription.eventName"
+            ></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  <button ng-click="vm.saveEvent(vm.event)" class="btn btn-success">Save Event</button>
+</div>

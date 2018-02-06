@@ -1,0 +1,23 @@
+<div class="payment-container event">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="event-image">
+				<img ng-src="{{vm.event.imageUrl}}">
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="event-header">
+				<h2 ng-bind="vm.event.name"></h2>
+				<h4>Ticket: {{vm.ticket.name}}</h4>
+				<h4>Price: {{vm.ticket.price}} $</h4>
+			</div>
+		</div>
+	</div>
+	<div class="chose-payment-method">
+		<a class="btn btn-default" ui-sref="payment.paypal">Pay Pal</a>
+		<a class="btn btn-default" ui-sref="payment.securion">Securion</a>
+		<a class="btn btn-default" ui-sref="payment.pokupo">Pokupo</a>
+	</div>
+
+	<div ui-view></div>
+</div>

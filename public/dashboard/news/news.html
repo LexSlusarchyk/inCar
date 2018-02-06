@@ -1,0 +1,59 @@
+<div class="news-panel">
+  <div class="row">
+    <div class="col-md-4">
+      <button data-ng-click="vm.showAddCategoryModal()" class="btn btn-default">Add category</button>
+      <ul class="list-group categories-block">
+        <li data-ng-repeat="cat in vm.newsCats" class="list-group-item">
+          <span data-ng-bind="cat.name"></span>
+          <div class="pull-right">
+            <span>
+              <a ui-sref="dashboard.createArticle({catId: cat.id})"
+                 class="btn btn-default btn-xs"
+                 title="Add Article">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </a>
+              <button class="btn btn-default btn-xs"
+                      data-ng-click="vm.showEditCategoryModal(cat)"
+                      title="Edit Category">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-danger btn-xs"
+                      data-ng-click="vm.showDeleteCategoryModal(cat)"
+                      title="Delete Category">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              </button>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <div data-ng-repeat="article in vm.news" class="manage-block row">
+        <div class="col-md-4">
+          <img data-ng-src="{{article.imgUrl}}">
+        </div>
+        <div class="col-md-8">
+          <h4 data-ng-bind="article.title"></h4>
+        </div>
+        <div class="manage-buttons">
+              <span>
+                <a class="btn btn-default btn-xs"
+                        ui-sref="dashboard.editArticle({id: article.id})"
+                        title="Edit Article">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+                <button class="btn btn-danger btn-xs"
+                        data-ng-click="vm.showDeleteArticleModal(article)"
+                        title="Delete Article">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+              </span>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,69 @@
+<div class="smart-navigation">
+	<img class="slide-menu-logo" src="content/images/incar-logo.png">
+
+	<div class="navigation-pages">
+		<p class="sn-header">Navigation:</p>
+		<div class="pages-list">
+			<a href="" data-ng-if="vm.isAdmin" ng-click="vm.goToState('dashboard.events')">Dashboard</a>
+			<a href="" data-ng-if="vm.isLoggedIn" ng-click="vm.goToState('profile', {id: vm.userData.userData.id})">Profile</a>
+			<a href="" ng-click="vm.goToState('tickets')">My tickets</a>
+			<a href="" ng-click="vm.goToState('news')">News</a>
+			<a href="" ng-click="vm.goToState('texts', {id: 'contact'})">Contact Us</a>
+			<a href="" ng-click="vm.goToState('texts', {id: 'about'})">About</a>
+			<a href="" ng-click="vm.goToState('texts', {id: 'faq'})">FAQ</a>
+		</div>
+	</div>
+
+
+	<div class="user-thumbnail">
+		<div class="log-in-block">
+			<a class="sign-in-button" href="" data-ng-hide="vm.userData.userData" ng-click="vm.goToState('sign.in')" >
+				<span>Log in</span>
+				<span class="sign-in-icon" title="Sign Out">
+					<i class="fa fa-sign-in" aria-hidden="true"></i>
+				</span>
+			</a>
+		</div>
+
+		<div data-ng-show="vm.userData.userData" class="user-data">
+			<div class="profile-image">
+				<img ng-show="vm.userData.userData.imageurl" ng-src="{{vm.userData.userData.imageurl}}">
+				<img ng-hide="vm.userData.userData.imageurl" src="content/images/placeholder_cropped.jpg">
+			</div>
+
+			<div class="username">
+				<a ng-click="vm.goToState('profile', {id: vm.userData.userData.id})" href="">{{vm.userData.userData.email}}</a>
+			</div>
+
+		<span class="sign-out" title="Sign Out" data-ng-click="vm.signOut()">
+			<i class="fa fa-sign-out" aria-hidden="true"></i>
+		</span>
+		</div>
+	</div>
+
+	<div data-ng-if="vm.isLoggedIn" class="location-multiselect">
+		<p class="sn-header">Select Location:</p>
+		<infinite-select data-tree="vm.locations"
+										 data-selected-options-list="vm.selectedLocations"
+										 data-config="vm.multiselectConfig"
+										 data-ng-if="vm.multiselectConfig"
+		></infinite-select>
+	</div>
+
+	<div class="cats-navigation">
+		<p class="sn-header">Select Category:</p>
+		<div class="previous-cat-controls">
+			<button ng-show="vm.previouslyActiveCat" ng-click='vm.backToPreviousCat()'  class='btn btn-default'>
+				<span data-ng-bind="vm.previouslyActiveCatName"></span>
+				<i class='fa fa-long-arrow-left'></i>
+			</button>
+		</div>
+
+		<ul class="slide-navigation">
+			<li ng-repeat="cat in vm.activeCat" ng-click='vm.onCatClick(cat)'>
+				<a href=''>{{cat.name}}</a>
+			</li>
+		</ul>
+	</div>
+
+</div>

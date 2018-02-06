@@ -1,0 +1,25 @@
+<div id="events-view">
+	<h1>Events</h1>
+	<div class="col-md-4 smaller">
+		<cat-tree-indented cats='cats' config="config"><cat-tree-indented>
+	</div>
+	<div class="col-md-8">
+		<div ng-repeat="event in events track by $index" class="row event-thumb">
+			<div class="col-md-4">
+				<img style="width: 100%" ng-src="{{event.imageUrl}}">
+			</div>
+			<div class="col-md-8">
+				<a ui-sref="dashboard.editevent({'eventId': event.id})">{{event.name}}</a>
+			</div>
+			<div class="pull-right">
+				<button class="btn btn-default btn-sm" ng-click="editEvent(event)">
+					<i class="fa fa-pencil" aria-hidden="true"></i>
+				</button>
+				<button class="btn btn-danger btn-sm" ng-click="removeEvent(event, $index)">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+

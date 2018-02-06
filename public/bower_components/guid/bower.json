@@ -1,0 +1,14 @@
+{
+  "name": "guid",
+  "main": "guid.js",
+  "homepage": "https://github.com/ascode/jif-guid",
+  "authors": [
+    "金飞"
+  ],
+  "description": "This could easily generate a guid string for javascript language.",
+  "moduleType": [],
+  "keywords": [
+    "guid"
+  ],
+  "license": "MIT"
+}

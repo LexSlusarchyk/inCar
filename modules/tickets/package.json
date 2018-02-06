@@ -1,0 +1,5 @@
+{
+  "name": "@dist/tickets",
+  "main": "./module",
+  "description": "Tickets module"
+}

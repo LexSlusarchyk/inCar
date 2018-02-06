@@ -1,0 +1,21 @@
+<div class="admin-item">
+  <div class="">
+    <div class="col-md-4">
+      <div class="admin-item-image">
+        <img ng-show="vm.image" ng-src="{{vm.image}}">
+        <img ng-hide="vm.image" src="content/images/placeholder_cropped.jpg">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h3 class="admin-item-title" ng-bind="vm.name"></h3>
+    </div>
+    <div class="admin-item-controls pull-right">
+        <button class="btn btn-default btn-sm" ng-click="vm.edit()" title="Edit">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-danger btn-sm" ng-click="vm.remove()" title="Delete">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+    </div>
+  </div>
+</div>

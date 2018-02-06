@@ -1,0 +1,1 @@
+This could easily generate a guid string for javascript language.

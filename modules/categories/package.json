@@ -1,0 +1,5 @@
+{
+  "name": "@dist/categories",
+  "main": "./module",
+  "description": "Categories module"
+}

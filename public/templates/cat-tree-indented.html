@@ -1,0 +1,30 @@
+<div class="cat-tree-indented">
+	<ul class="list-group cat-list">
+		<li ng-repeat='cat in vm.cats track by $index' class="deepness{{cat.deepness}} list-group-item cat-list-item">
+			<a href="">{{cat.name}}</a>
+			<div class="pull-right">
+				<span ng-hide="vm.config.addEventButtonVisible">
+					<button class="btn btn-default btn-sm" ng-click="vm.showAddSubcatModal(cat)" title="Add subcategory">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</button>
+					<button class="btn btn-default btn-sm" ng-click="vm.showEditSubcatModal(cat)" title="Edit Subcategory">
+						<i class="fa fa-pencil" aria-hidden="true"></i>
+					</button>
+					<button class="btn btn-danger btn-sm" ng-click="vm.removeCat(cat)" title="Delete subcategory">
+						<i class="fa fa-trash-o" aria-hidden="true"></i>
+					</button>
+				</span>
+				<span ng-show="vm.config.addEventButtonVisible && !cat.hasChildren" title="Filter by category">
+					<button class="btn btn-default btn-sm filter-button"
+									data-ng-click="vm.setActiveCat(cat.id)"
+									data-ng-class="{active: vm.config.filterCat === cat.id}">
+						<i class="fa fa-filter" aria-hidden="true"></i>
+					</button>
+					<a ui-sref="dashboard.addevent({catId:cat.id})" class="btn btn-sm btn-default" title="add event">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+					</a>
+				</span>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,5 @@
+{
+  "name": "@dist/news",
+  "main": "./module",
+  "description": "News module"
+}
