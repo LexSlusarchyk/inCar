@@ -27,7 +27,10 @@ class User extends app.core.Model {
         this.role = '';
         this.physicalAddress = '';
         this.version = '';
-        this.isActivated = params.isActivated ? 1 : 0;;
+        this.isActivated = params.isActivated ? 1 : 0;
+        this.userSteam = '';
+        this.userXbox = '';
+        this.userPs = '';
 
         this.init(params);
     }
@@ -195,6 +198,10 @@ function propertiesToDBDataset(excludePassword) {
     if (root.age) { userProperties.push('`age`="' + root.age + '"'); }
     if (root.physicalAddress) { userProperties.push('`physicalAddress`="' + root.physicalAddress + '"'); }
     if (root.version) { userProperties.push('`version`="' + root.version + '"'); }
+
+    if (root.userSteam) { userProperties.push('`userSteam`="' + root.userSteam + '"'); }
+    if (root.userXbox) { userProperties.push('`userXbox`="' + root.userXbox + '"'); }
+    if (root.userPs) { userProperties.push('`userPs`="' + root.userPs + '"'); }
 
     return userProperties;
 }

@@ -996,17 +996,17 @@ header {
 
 /*SignUp input*/
 .placeholder-steam {
-  background-image: url(http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-05/32/Steam-icon.png);
+  background-image: url(../images/Steam-icon.png);
   background-repeat: no-repeat;
   text-indent: 20px;
 }
 .placeholder-xbox {
-  background-image: url(http://icons.iconarchive.com/icons/martz90/circle-addon1/32/xbox-icon.png);
+  background-image: url(../images/xbox-icon.png);
   background-repeat: no-repeat;
   text-indent: 20px;
 }
 .placeholder-ps {
-  background-image: url(http://icons.iconarchive.com/icons/nendomatt/playstation-3/32/PS3-sixaxis-icon.png);
+  background-image: url(../images/PS3-sixaxis-icon.png);
   background-repeat: no-repeat;
   text-indent: 20px;
 }

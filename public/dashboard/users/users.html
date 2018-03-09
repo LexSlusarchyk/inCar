@@ -12,11 +12,17 @@
           <th>#</th>
           <th>Email</th>
           <th>Role</th>
+          <th>XBOX</th>
+          <th>PS4</th>
+          <th>Steam</th>
         </tr>
         <tr data-ng-repeat="user in vm.users | filter: vm.filter track by user.id">
           <td data-ng-bind="$index"></td>
           <td data-ng-bind="user.email"></td>
           <td data-ng-bind="user.role"></td>
+          <td data-ng-bind="user.userXbox"></td>
+          <td data-ng-bind="user.userPs"></td>
+          <td data-ng-bind="user.userSteam"></td>
         </tr>
       </table>
     </div>
