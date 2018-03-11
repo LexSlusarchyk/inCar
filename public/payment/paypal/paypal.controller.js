@@ -51,7 +51,8 @@
                         eventId: vm.event.id,
                         eventName: vm.event.name,
                         ticketId: vm.ticket.id,
-                        userId: usersService.data.userData.id
+                        userId: usersService.data.userData.id,
+                        userEmail: usersService.data.userData.email
                     })
                         .catch(function(err) {
                             alert('We weren\'t able to bill your credit card!');

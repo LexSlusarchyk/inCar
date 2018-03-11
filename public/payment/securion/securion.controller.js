@@ -44,7 +44,8 @@
                     cardOptions: token,
                     ticketId: vm.ticket.id,
                     eventName: vm.event.name,
-                    userId: usersService.data.userData.id
+                    userId: usersService.data.userData.id,
+                    userEmail: usersService.data.userData.email
                 };
 
                 paymentService.createSecurionTransaction(paymentOptions).then(function(response) {
