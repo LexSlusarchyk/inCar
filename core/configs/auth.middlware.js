@@ -7,7 +7,7 @@ function authMiddlware(req, res, next) {
     var authHeader = req.headers.authorization;
 
     if (req.url === '/api/users/login' || req.url === '/api/users/signup'
-        || req.url === 'api/payment/pay' || req.url === '/api/payment/securion'
+        || req.url === '/api/payment/pay' || req.url === '/api/payment/securion'
     || req.url === '/pokupo-confirm') {
         return next();
     }
