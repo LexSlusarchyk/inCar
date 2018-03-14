@@ -8,7 +8,7 @@ function authMiddlware(req, res, next) {
 
     if (req.url === '/api/users/login' || req.url === '/api/users/signup'
         || req.url === '/api/payment/pay' || req.url === '/api/payment/securion'
-    || req.url === '/pokupo-confirm') {
+    || req.url === '/pokupo-confirm' || req.url === '/pokupo-reserve') {
         return next();
     }
 

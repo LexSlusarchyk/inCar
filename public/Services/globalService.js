@@ -11,8 +11,8 @@
     	var defer;
     	var service = {
             //apiUrl: 'http://lnd-app.us-west-2.elasticbeanstalk.com',
-            //apiUrl: 'http://localhost:8081',
-            apiUrl: 'http://www.incar.online',
+            apiUrl: 'http://localhost:8081',
+            //apiUrl: 'http://www.incar.online',
             filterFalseKeys: filterFalseKeys
     	};
 

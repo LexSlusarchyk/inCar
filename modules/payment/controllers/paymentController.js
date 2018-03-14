@@ -67,8 +67,6 @@ function getClientToken (req, res) {
 
 function createTransaction(req, res) {
 
-    sendEmailNotification(req.body.userEmail);
-
     gateway.transaction.sale({
       amount: req.body.amount,
       paymentMethodNonce: req.body.nonce,
@@ -85,6 +83,7 @@ function createTransaction(req, res) {
                 .then(function(lolka) {
                     ticket
                         .buy(req.body.userId, req.body.eventName, req.body.eventId).then(function(data){
+                            sendEmailNotification(req.body.userEmail);
                             res.send({success: true})
                         })
                         .catch(function (err) {
@@ -99,8 +98,6 @@ function createTransaction(req, res) {
 }
 
 function securionTransaction(req, res) {
-
-    sendEmailNotification(req.body.userEmail);
 
     securion.charges.create({
         amount: req.body.amount,
@@ -189,6 +186,7 @@ function pokupoConfirm(req, res) {
                     reservedTicket
                         .buy(userId, reservedTicket.eventName, reservedTicket.eventId)
                         .then(function(data) {
+
                             var activateQuery = 'UPDATE reservedTickets SET isActivated="1" WHERE id="' + activationId + '"';
 
                             req.getConnection(function(err, connection) {
