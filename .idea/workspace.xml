@@ -3,14 +3,17 @@
   <component name="ChangeListManager">
     <list id="50344425-ed56-44ef-8865-120bba63c555" name="aws" comment="" />
     <list default="true" id="434d5a0a-d7c2-4c29-b403-2d7f8f6ac43e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/express.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/configs/express-server.js" afterPath="$PROJECT_DIR$/core/configs/express-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/s3-config.json" afterPath="$PROJECT_DIR$/core/s3-config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/settings.json" afterPath="$PROJECT_DIR$/core/settings.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Services/globalService.js" afterPath="$PROJECT_DIR$/public/Services/globalService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dashboard/users/users.html" afterPath="$PROJECT_DIR$/public/dashboard/users/users.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/profile/edit/edit-profile.html" afterPath="$PROJECT_DIR$/public/profile/edit/edit-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sign/signup.html" afterPath="$PROJECT_DIR$/public/sign/signup.html" />
     </list>
     <ignored path="express.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,28 +46,28 @@
       <file leaf-file-name="settings.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/settings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="18">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="express-server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="express-server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/configs/express-server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="27" />
+            <state relative-caret-position="486">
+              <caret line="30" column="8" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globalService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="globalService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/Services/globalService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="234">
+              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -73,7 +76,7 @@
       <file leaf-file-name="paymentController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/payment/controllers/paymentController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
+            <state relative-caret-position="720">
               <caret line="85" column="68" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="70" />
               <folding />
             </state>
@@ -185,34 +188,6 @@
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sign" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -334,7 +309,7 @@
       <workItem from="1520955549493" duration="9071000" />
       <workItem from="1520966040933" duration="1810000" />
       <workItem from="1521023158846" duration="6657000" />
-      <workItem from="1521122821119" duration="7723000" />
+      <workItem from="1521122821119" duration="9416000" />
     </task>
     <task id="LOCAL-00033" summary="aws deploy">
       <created>1491432654238</created>
@@ -683,7 +658,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65005000" />
+    <option name="totallyTimeSpent" value="66698000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -822,14 +797,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/nodemailer/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1174,34 +1141,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/payment/controllers/paymentController.js">
+    <entry file="file://$PROJECT_DIR$/core/configs/express-server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="85" column="68" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Services/globalService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="486">
+          <caret line="30" column="8" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/settings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="18">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/configs/express-server.js">
+    <entry file="file://$PROJECT_DIR$/modules/payment/controllers/paymentController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="720">
+          <caret line="85" column="68" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Services/globalService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding />
         </state>
       </provider>

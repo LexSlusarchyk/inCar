@@ -22,13 +22,13 @@ const http = require('http'),
     //    database: 'ebdb'
     //  };
     path = require('path'),
-        dbOptions = {
-            host: 'aa13ggag4nzbrh6.cmc8dpsfffgd.us-west-2.rds.amazonaws.com',
-            user: 'komix',
-            password: 'intruder1',
-            port: 3306,
-            database: 'ebdb'
-        };
+      dbOptions = {
+        host: 'localhost',
+        user: 'root',
+        password: '199152418',
+        port: 3306,
+        database: 'LND'
+      };
 
 module.exports = {
     init
