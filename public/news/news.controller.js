@@ -12,7 +12,7 @@
         vm.activeCategoryId = null;
         vm.usersService = usersService;
 
-        vm.filterFunction = filterFunction;
+//        vm.filterFunction = filterFunction;
         vm.goToArticle = goToArticle;
         vm.changeActiveCategory = changeActiveCategory;
 
@@ -38,7 +38,7 @@
         vm.onBaseOptionChanged = function() {
 
         };
-
+/*
         function filterFunction(actual) {
             var result = true;
 
@@ -52,7 +52,7 @@
 
             return result;
         }
-
+*/
         function goToArticle(article) {
             $state.go('article', {id: article.id});
         }

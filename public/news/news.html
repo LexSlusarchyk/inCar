@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="col-md-6 cust-padding">
-        <article-thumbnail data-ng-repeat="article in vm.news | filter: vm.filterFunction track by article.id"
+        <article-thumbnail data-ng-repeat="article in vm.news track by article.id"
                            data-article="article"
         ></article-thumbnail>
       </div>
