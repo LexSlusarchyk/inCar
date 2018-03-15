@@ -15,6 +15,7 @@
           <th>XBOX</th>
           <th>PS4</th>
           <th>Steam</th>
+          <th>Physical address</th>
         </tr>
         <tr data-ng-repeat="user in vm.users | filter: vm.filter track by user.id">
           <td data-ng-bind="$index"></td>
@@ -23,6 +24,7 @@
           <td data-ng-bind="user.userXbox"></td>
           <td data-ng-bind="user.userPs"></td>
           <td data-ng-bind="user.userSteam"></td>
+          <td data-ng-bind="user.physicalAddress"></td>
         </tr>
       </table>
     </div>
