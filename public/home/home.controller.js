@@ -9,6 +9,7 @@
 	/* @ngInject */
 	function HomeController(adsService, eventsService, newsService) {
 		var vm = this;
+		var events = null;
 
 		activate();
 
@@ -17,9 +18,14 @@
 				vm.mainAudio = response.data;
 			});
 
+            eventsService.getFixedEvents().then(function(response) {
+                events = response.data;
+
+            });
+
 			eventsService.getLastEvents().then(function(response) {
 				vm.maxLength = 3;
-				vm.events = response.data;
+                vm.events = events.concat(response.data).slice(0,6);
 			});
 
 			newsService.getLastNews().then(function(response) {

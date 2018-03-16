@@ -5,6 +5,7 @@ const app = alias.require('@root/app').app,
 
 app.get('/api/events/list', eventsController.getAllEvents);
 app.get('/api/events/last', eventsController.getLastEvents);
+app.get('/api/events/fixed', eventsController.getFixedEvents);
 app.get('/api/events/:id', eventsController.getEvent);
 app.get('/api/events/category/:id', eventsController.getEventsByCatId);
 app.post('/api/events', eventsController.createEvent);

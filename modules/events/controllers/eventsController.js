@@ -9,6 +9,7 @@ const app = alias.require('@root/app'),
 module.exports = {
     getAllEvents,
 	getLastEvents,
+    getFixedEvents,
     getEvent,
     getEventsByCatId,
     createEvent,
@@ -43,6 +44,17 @@ function getLastEvents(req, res) {
 			res.send(results);
 		})
 	})
+}
+
+function getFixedEvents(req, res) {
+    var query = 'Select * FROM events WHERE isFixed="1"';
+    req.getConnection(function(err, connection) {
+        if (err) return res.send(err);
+        connection.query(query, function(err, results){
+            if (err) return res.sendStatus(500);
+            res.send(results);
+        })
+    })
 }
 
 function getEvent(req, res) {

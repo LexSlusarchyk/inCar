@@ -14,6 +14,7 @@
             getEvent: getEvent,
             getEvents: getEvents,
             getLastEvents: getLastEvents,
+            getFixedEvents: getFixedEvents,
             createEvent: createEvent,
             removeEvent: removeEvent,
             updateEvent: updateEvent,
@@ -50,6 +51,19 @@
 
             var defered = $q.defer();
             var query = apiUrl + '/api/events/last';
+
+
+            $http.get(query).then(function(data){
+                defered.resolve(data);
+            });
+
+            return defered.promise;
+        }
+
+        function getFixedEvents() {
+
+            var defered = $q.defer();
+            var query = apiUrl + '/api/events/fixed';
 
 
             $http.get(query).then(function(data){
