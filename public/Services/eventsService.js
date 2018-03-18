@@ -17,6 +17,7 @@
             getFixedEvents: getFixedEvents,
             createEvent: createEvent,
             removeEvent: removeEvent,
+            fixEvent: fixEvent,
             updateEvent: updateEvent,
             createTicket: createTicket,
             getTickets: getTickets,
@@ -98,6 +99,15 @@
             var query = apiUrl + '/api/events/' + id;
             
             $http.delete(query).then(function(data){
+                defered.resolve(data);
+            });
+            return defered.promise;
+        }
+
+        function fixEvent(params) {
+            var defered = $q.defer();
+            var query = apiUrl + '/api/events/' + params.id;
+            $http.post(query, params).then(function(data){
                 defered.resolve(data);
             });
             return defered.promise;

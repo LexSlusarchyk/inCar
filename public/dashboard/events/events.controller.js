@@ -15,6 +15,7 @@
             filterCat: null
         };
 
+        vm.fixEvent = fixEvent;
         vm.editEvent = editEvent;
         vm.removeEvent = removeEvent;
         vm.filter = customFilter;
@@ -43,6 +44,13 @@
                     vm.events.splice(index, 1);
                 }
             })
+        }
+
+        function fixEvent(event){
+            eventsService.fixEvent({isFixed : event.isFixed, id : event.id}).then(function (data) {
+                $state.go('dashboard.events');
+            });
+            event.isFixed = !event.isFixed;
         }
 
         function customFilter(actual) {

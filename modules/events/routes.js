@@ -11,6 +11,7 @@ app.get('/api/events/category/:id', eventsController.getEventsByCatId);
 app.post('/api/events', eventsController.createEvent);
 app.put('/api/events/:id', eventsController.updateEvent);
 app.delete('/api/events/:id', eventsController.deleteEvent);
+app.post('/api/events/:id', eventsController.fixEvent);
 
 app.get('/api/events/tickets/:eventId', eventsController.getTickets);
 app.get('/api/events/tickets/ticket/:ticketId', eventsController.getTicket);

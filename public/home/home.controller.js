@@ -9,7 +9,7 @@
 	/* @ngInject */
 	function HomeController(adsService, eventsService, newsService) {
 		var vm = this;
-		var events = null;
+		var events = [];
 
 		activate();
 
@@ -18,15 +18,17 @@
 				vm.mainAudio = response.data;
 			});
 
- //           eventsService.getFixedEvents().then(function(response) {
- //               events = response.data;
-
- //           });
+            eventsService.getFixedEvents().then(function(response) {
+                events = response.data;
+            });
 
 			eventsService.getLastEvents().then(function(response) {
 				vm.maxLength = 3;
-//                vm.events = events.concat(response.data).slice(0,6);
-                vm.events = response.data;
+				if(events.length < 6) {
+                    vm.events = events.concat(response.data).slice(0, 6);
+                } else {
+                    vm.events = events;
+				}
 			});
 
 			newsService.getLastNews().then(function(response) {

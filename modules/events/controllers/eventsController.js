@@ -14,6 +14,7 @@ module.exports = {
     getEventsByCatId,
     createEvent,
     updateEvent,
+    fixEvent,
     deleteEvent,
     createTicket,
     getTickets,
@@ -115,6 +116,19 @@ function updateEvent(req, res) {
 			res.send(results);
 		})
 	})
+}
+
+function fixEvent(req, res) {
+	var isFixed = +!req.body.isFixed;
+    var query = 'UPDATE events SET isFixed = "' + isFixed + '" WHERE id="' + req.body.id + '" LIMIT 1';
+
+    req.getConnection(function(err, connection) {
+        if (err) return res.send(err);
+        connection.query(query, function(err, results){
+            if (err) return res.send(err);
+            res.send(results);
+        })
+    })
 }
 
 function deleteEvent(req, res) {

@@ -13,6 +13,18 @@
         <a ui-sref="dashboard.editevent({'eventId': event.id})">{{event.name}}</a>
       </div>
       <div class="pull-right">
+        <button class="btn btn-default btn-sm"
+          data-ng-if="event.isFixed"
+          data-toggle="tooltip" title="Unlock event"
+          ng-click="vm.fixEvent(event)">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-default btn-sm"
+                data-ng-if="!event.isFixed"
+                data-toggle="tooltip" title="Fix event"
+                ng-click="vm.fixEvent(event)">
+          <i class="fa fa-unlock" aria-hidden="true"></i>
+        </button>
         <button class="btn btn-default btn-sm" ng-click="vm.editEvent(event)">
           <i class="fa fa-pencil" aria-hidden="true"></i>
         </button>
@@ -23,3 +35,4 @@
     </div>
   </div>
 </div>
+
