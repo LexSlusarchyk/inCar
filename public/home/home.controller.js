@@ -9,27 +9,28 @@
 	/* @ngInject */
 	function HomeController(adsService, eventsService, newsService) {
 		var vm = this;
-		var events = [];
+
 
 		activate();
 
 		function activate() {
+
 			adsService.getMainAd().then(function(response) {
 				vm.mainAudio = response.data;
 			});
 
-            eventsService.getFixedEvents().then(function(response) {
-                events = response.data;
-            });
-
 			eventsService.getLastEvents().then(function(response) {
 				vm.maxLength = 3;
-				if(events.length < 6) {
-                    vm.events = events.concat(response.data).slice(0, 6);
-                } else {
-                    vm.events = events;
-				}
+                vm.events = response.data;
 			});
+
+            eventsService.getFixedEvents().then(function(response) {
+                if(response.data.length < 6) {
+                    vm.events = response.data.concat(vm.events).slice(0, 6);
+                } else {
+                    vm.events = response.data;
+				}
+            });
 
 			newsService.getLastNews().then(function(response) {
 				vm.news = response.data;

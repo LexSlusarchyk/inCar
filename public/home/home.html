@@ -18,7 +18,7 @@
 						<h1 class="main-section">Latest Events:</h1>
 						<div class="container-fluid">
 							<div class="row row-cust-padding">
-								<div class="col-md-4 col-sm-6" data-ng-repeat="event in vm.events track by event.id">
+								<div class="col-md-4 col-sm-6" data-ng-repeat="event in vm.events track by $index">
 									<event-thumbnail event="event" index="$index"><event-thumbnail>
 								</div>
 							</div>
