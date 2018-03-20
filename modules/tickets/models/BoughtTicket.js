@@ -29,7 +29,7 @@ class BoughtTicket extends app.core.Model {
         var fields = ['id', 'eventId', 'userId'];
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {reject(err);}
 
 
@@ -39,7 +39,7 @@ class BoughtTicket extends app.core.Model {
                         root[field] = ticketData[field];
                     }
                 }
-
+                connection.release();
                 resolve(true);
             });
         })

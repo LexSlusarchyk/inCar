@@ -39,7 +39,7 @@ class Ad extends app.core.Model {
         var adData;
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 }
@@ -54,6 +54,7 @@ class Ad extends app.core.Model {
                             }
                         }
                     }
+                    connection.release();
                     resolve(true);
                 }
             });
@@ -69,10 +70,11 @@ class Ad extends app.core.Model {
         var query = 'INSERT INTO ads SET ' + adDataToDb;
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     return reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })
@@ -90,10 +92,11 @@ class Ad extends app.core.Model {
         var query = 'UPDATE ads SET ' + adDataToDb + ' WHERE id="' + root.id + '" LIMIT 1';
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })
@@ -105,10 +108,11 @@ class Ad extends app.core.Model {
         var query = 'DELETE FROM ads WHERE id="' + root.id + '"';
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })

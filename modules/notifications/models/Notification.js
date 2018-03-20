@@ -31,7 +31,7 @@ class Notification extends app.core.Model {
         var adData;
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 }
@@ -46,6 +46,7 @@ class Notification extends app.core.Model {
                             }
                         }
                     }
+                    connection.release();
                     resolve(true);
                 }
             });
@@ -62,10 +63,11 @@ class Notification extends app.core.Model {
         var query = 'INSERT INTO notifications SET ' + adDataToDb;
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     return reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })
@@ -86,10 +88,11 @@ class Notification extends app.core.Model {
         var query = 'UPDATE notifications SET ' + adDataToDb + ' WHERE id="' + root.id + '" LIMIT 1';
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })
@@ -101,10 +104,11 @@ class Notification extends app.core.Model {
         var query = 'DELETE FROM notifications WHERE id="' + root.id + '"';
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query) {
+            db.query(query, function(err, results, query, connection) {
                 if (err) {
                     reject(err);
                 } else {
+                    connection.release();
                     resolve(results);
                 }
             })
