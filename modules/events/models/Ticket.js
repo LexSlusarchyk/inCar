@@ -35,7 +35,7 @@ class Ticket extends app.core.Model {
         var fields = ['eventId', 'eventImgUrl', 'eventName', 'id', 'name', 'price', 'quantity'];
 
         return new Promise(function(resolve, reject) {
-            db.query(query, function(err, results, query, connection) {
+            db.query(query, function(err, results, query) {
                 if (err) {
                     reject(err);
                 } else {
@@ -45,7 +45,6 @@ class Ticket extends app.core.Model {
                             root[field] = ticketData[field];
                         }
                     }
-                    connection.release();
                     resolve(true);
                 }
             });
@@ -69,7 +68,7 @@ class Ticket extends app.core.Model {
                 reject('no more tickets');
             }
 
-            db.query(userQuery, function(err, results, connection) {
+            db.query(userQuery, function(err, results) {
                 if (err) { return reject(err);}
                 var user = results[0];
                 ticketData.userEmail = user.email;
@@ -77,22 +76,19 @@ class Ticket extends app.core.Model {
                 var ticketDataToDb = helper.propertiesToDBDataset(ticketData);
                 var createQuery = 'INSERT INTO boughttickets SET ' + ticketDataToDb;
 
-                db.query(createQuery, function(err, results, query, connection) {
+                db.query(createQuery, function(err, results, query) {
                     if (err) {
                         reject(err);
                     } else {
-                        db.query(decrementQuery, function(err, results, query, connection) {
+                        db.query(decrementQuery, function(err, results, query) {
                             if (err) {
                                 reject(err)
                             } else {
-                                connection.release();
                                 resolve(true);
                             }
                         });
-                        connection.release();
                     }
                 })
-                connection.release();
             });
         })
     }
@@ -108,9 +104,8 @@ class Ticket extends app.core.Model {
             var query = 'INSERT INTO reservedtickets (userID, ticketId, token) VALUES("'
                 + userId + '" , "' + root.id + '" , "' + token + '")';
 
-            db.query(query, function(err, results, connection) {
+            db.query(query, function(err, results) {
                 if (err) { return reject(err);}
-                connection.release();
                 resolve(true);
             });
         })
@@ -120,9 +115,8 @@ class Ticket extends app.core.Model {
         return new Promise(function(resolve, reject) {
             var query = 'SELECT * FROM reservedtickets WHERE token="' + token + '" AND isActivated IS NULL';
 
-            db.query(query, function(err, results, connection) {
+            db.query(query, function(err, results) {
                 if (err) { return reject(err);}
-                connection.release();
                 resolve(results[0]);
             });
         })

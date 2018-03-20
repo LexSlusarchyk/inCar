@@ -41,7 +41,7 @@ class Article extends app.core.Model {
 
         return new Promise(function(resolve, reject) {
             db.getConnection(function(err, connection) {
-                connection.query(query, function(err, results, query, connection) {
+                connection.query(query, function(err, results) {
                     if (err) {
                         reject('error');
                     }
@@ -70,7 +70,7 @@ class Article extends app.core.Model {
 
         return new Promise(function(resolve, reject) {
             db.getConnection(function(err, connection) {
-                connection.query(query, function(err, results, query, connection) {
+                connection.query(query, function(err, results) {
                     if (err) {
                         return reject(err);
                     } else {
@@ -95,7 +95,7 @@ class Article extends app.core.Model {
 
         return new Promise(function(resolve, reject) {
             db.getConnection(function(err, connection) {
-                connection.query(query, function(err, results, query, connection) {
+                connection.query(query, function(err, results) {
                     if (err) {
                         reject('error');
                     } else {
@@ -113,7 +113,7 @@ class Article extends app.core.Model {
 
         return new Promise(function(resolve, reject) {
             db.getConnection(function(err, connection) {
-                connection.query(query, function(err, results, query, connection) {
+                connection.query(query, function(err, results) {
                     if (err) {
                         reject('error');
                     } else {
