@@ -106,8 +106,8 @@
 
         function fixEvent(params) {
             var defered = $q.defer();
-            var query = apiUrl + '/api/events/' + params.id;
-            $http.post(query, params).then(function(data){
+            var query = apiUrl + '/api/events/event/' + params.id;
+            $http.put(query, params).then(function(data){
                 defered.resolve(data);
             });
             return defered.promise;
