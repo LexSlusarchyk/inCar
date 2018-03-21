@@ -29,9 +29,14 @@
     function TicketItemController($rootScope, $scope, $element, $uibModal, eventsService, confirmService) {
         var vm = this;
         vm.removeTicket = removeTicket;
+        vm.stopSale = stopSale;
 
         function removeTicket() {
             $scope.$parent.vm.removeTicket(vm.index);
+        }
+
+        function stopSale() {
+            $scope.$parent.vm.stopSale(vm.index);
         }
     }
 })();

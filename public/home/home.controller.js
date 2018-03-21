@@ -31,7 +31,7 @@
                     }
                 });
 			});
-			
+
 			newsService.getLastNews().then(function(response) {
 				vm.news = response.data;
 			});

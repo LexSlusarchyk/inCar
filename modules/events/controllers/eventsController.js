@@ -20,6 +20,7 @@ module.exports = {
     getTickets,
     getTicket,
     updateTicket,
+    stopSale,
     deleteTicket
 };
 
@@ -176,6 +177,19 @@ function getTickets(req, res) {
 
 function updateTicket(req, res) {
 
+}
+
+function stopSale(req, res) {
+    var notAvailable = +!req.body.notAvailable;
+    var query = 'UPDATE tickets SET notAvailable = "' + notAvailable + '" WHERE id="' + req.body.id + '" LIMIT 1';
+
+    req.getConnection(function(err, connection) {
+        if (err) return res.send(err);
+        connection.query(query, function(err, results){
+            if (err) return res.send(err);
+            res.send(results);
+        })
+    })
 }
 
 function deleteTicket(req, res) {

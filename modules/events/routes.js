@@ -17,5 +17,6 @@ app.get('/api/events/tickets/:eventId', eventsController.getTickets);
 app.get('/api/events/tickets/ticket/:ticketId', eventsController.getTicket);
 app.post('/api/events/tickets', eventsController.createTicket);
 app.put('/api/events/tickets/:id', eventsController.updateTicket);
+app.put('/api/events/tickets/ticket/:id', eventsController.stopSale);
 app.delete('/api/events/tickets/:id', eventsController.deleteTicket);
 

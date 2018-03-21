@@ -27,6 +27,7 @@
             getUserTickets: getUserTickets,
             updateTicket: updateTicket,
             deleteTicket: deleteTicket,
+            stopSale: stopSale,
             usdToRub: usdToRub
         };
 
@@ -205,6 +206,17 @@
             var query = apiUrl + '/api/events/tickets/' + ticketId;
 
             $http.delete(query).then(function(data){
+                defered.resolve(data);
+            });
+
+            return defered.promise;
+        }
+
+        function stopSale(params) {
+            var defered = $q.defer();
+            var query = apiUrl + '/api/events/tickets/ticket/' + params.id;
+
+            $http.put(query, params).then(function(data){
                 defered.resolve(data);
             });
 

@@ -86,6 +86,7 @@
         vm.saveEvent = saveEvent;
         vm.openTicketCreateModal = openTicketCreateModal;
         vm.removeTicket = removeTicket;
+        vm.stopSale = stopSale;
 
         activate();
 
@@ -173,6 +174,21 @@
                     vm.event.tickets.push(data.data);
                 })
             })
+        }
+
+        function stopSale(index) {
+            var ticket = vm.event.tickets[index];
+            var params = {};
+            params.id = ticket.id;
+            params.notAvailable = ticket.notAvailable;
+
+            console.log(params);
+
+            eventsService.stopSale(params).then(function(data) {
+                console.log('Sale stoped!');
+            })
+            vm.event.tickets[index].notAvailable = !vm.event.tickets[index].notAvailable; //for ng-if in ticket-item.html
+            console.log(ticket);
         }
 
         function removeTicket(index) {

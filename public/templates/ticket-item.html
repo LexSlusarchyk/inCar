@@ -1,4 +1,6 @@
 <div class="ticket-item">
+	<button data-ng-if="!vm.ticket.notAvailable" ng-click="vm.stopSale()" class="btn btn-warning">Stop Sale</button>
+	<button data-ng-if="vm.ticket.notAvailable" ng-click="vm.stopSale()" class="btn btn-success">Start Sale</button>
 	<p>{{vm.ticket.name}}</p>
 	<p>Price: {{vm.ticket.price}}</p>
 	<p>Quantity: {{vm.ticket.quantity}}</p>
