@@ -1,7 +1,8 @@
+
 {
-    "host": "localhost",
-    "user": "root",
-    "password": "199152418",
-    "database": "LND",
+    "host": "aa13ggag4nzbrh6.cmc8dpsfffgd.us-west-2.rds.amazonaws.com",
+    "user": "komix",
+    "password": "intruder1",
+    "database": "ebdb",
     "port": 3306
 }
