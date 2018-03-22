@@ -59,6 +59,7 @@
                         })
                         .then(function(data) {
                             if (data) {
+                                alert('Success!');
                                 $state.go('tickets');
                             }
                         });

@@ -1,7 +1,7 @@
 <div class="event-ticket">
 	<p ng-bind="vm.ticket.name"></p>
 	<p>Price: <span ng-bind="vm.ticket.price"></span> $</p>
-	<a data-ng-if="!vm.ticket.notAvailable"
+	<a data-ng-if="vm.ticket.price != 0 && !vm.ticket.notAvailable"
 	   class="btn btn-sm btn-primary pull-right"
 	   ui-sref="payment({ticketId: vm.ticket.id})"
 	>Buy</a>
@@ -9,4 +9,8 @@
 	   class="btn-warning btn-sm btn-primary pull-right"
 	   ui-sref="home"
 	>Sold out</a>
+	<a data-ng-if="vm.ticket.price == 0"
+	   class="btn-success btn-sm btn-primary pull-right"
+	   ui-sref="payment({ticketId: vm.ticket.id})"
+	>Free</a>
 </div>

@@ -9,3 +9,5 @@ app.post('/api/payment/securion', paymentController.securionTransaction);
 app.post('/api/payment/pokupo-reserve', paymentController.pokupoReserve);
 app.post('/pokupo-confirm', paymentController.pokupoConfirm);
 
+app.post('/api/payment/free', paymentController.createFreeTransaction);
+

@@ -6,35 +6,7 @@ const app = alias.require('@root/app'),
     Ticket = require('../../events/models/Ticket'),
     helper = alias.require('@root/helper'),
     uuid = require('uuid/v1'),
-    securion = require('securionpay')('sk_test_qcUjwksuIjuHHnHiA3nwFBZc'),
-    nodemailer = require('nodemailer');
-
-
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'incar.online@gmail.com',
-        pass: 'rapass11'
-    }
-});
-
-function sendEmailNotification(userEmail) {
-    var html = '<h3>Incar Online</h3>' +
-        '<p></p>' +
-        '<p>Important: your event information included.</p>' +
-        '<p>Thank you for event registration, your payment has been successful received. You will receive</p>' +
-        '<p>further instruction including your room password via email or invite prior to event start(please see</p>' +
-        '<p>event description).</p>' +
-        '<p></p>' +
-        '<p>InCAR Team.</p>';
-
-    transporter.sendMail({
-        to: userEmail,
-        subject: 'Transaction details',
-        html: html,
-        text: 'hello world!'
-    });
-}
+    securion = require('securionpay')('sk_test_qcUjwksuIjuHHnHiA3nwFBZc');
 
 //var gateway = braintree.connect({
 //    environment:  braintree.Environment.Sandbox,
@@ -55,7 +27,9 @@ module.exports = {
     createTransaction,
     securionTransaction,
     pokupoReserve,
-    pokupoConfirm
+    pokupoConfirm,
+    createFreeTransaction
+
 };
 
 function getClientToken (req, res) {
@@ -96,6 +70,27 @@ function createTransaction(req, res) {
         }
     });
 }
+
+
+function createFreeTransaction(req, res) {
+
+    var ticket = new Ticket({id: req.body.ticketId});
+    ticket.load()
+        .then(function(lolka) {
+            ticket
+                .buy(req.body.userId, req.body.eventName, req.body.eventId).then(function(data){
+                res.send({success: true})
+            })
+                .catch(function (err) {
+                    return res.send(err);
+                });
+        })
+        .catch(function (err) {
+            return res.send(err);
+        });
+
+}
+
 
 function securionTransaction(req, res) {
 

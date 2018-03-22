@@ -5,7 +5,34 @@ const app = alias.require('@root/app'),
     fileSystem = require("fs"),
     Promise = require('bluebird'),
     helper = alias.require('@root/helper'),
-    db = require('../../../core/db');
+    db = require('../../../core/db'),
+    nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'incar.online@gmail.com',
+        pass: 'rapass11'
+    }
+});
+
+function sendEmailNotification(userEmail) {
+    var html = '<h3>Incar Online</h3>' +
+        '<p></p>' +
+        '<p>Important: your event information included.</p>' +
+        '<p>Thank you for event registration, your payment has been successful received. You will receive</p>' +
+        '<p>further instruction including your room password via email or invite prior to event start(please see</p>' +
+        '<p>event description).</p>' +
+        '<p></p>' +
+        '<p>InCAR Team.</p>';
+
+    transporter.sendMail({
+        to: userEmail,
+        subject: 'Transaction details',
+        html: html,
+        text: 'hello world!'
+    });
+}
 
 class Ticket extends app.core.Model {
     constructor(params) {
@@ -72,7 +99,7 @@ class Ticket extends app.core.Model {
                 if (err) { return reject(err);}
                 var user = results[0];
                 ticketData.userEmail = user.email;
-
+                sendEmailNotification(user.email);
                 var ticketDataToDb = helper.propertiesToDBDataset(ticketData);
                 var createQuery = 'INSERT INTO boughttickets SET ' + ticketDataToDb;
 

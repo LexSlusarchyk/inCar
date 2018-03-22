@@ -15,7 +15,8 @@
             getBraintreeClient: getBraintreeClient,
             createTransaction: createTransaction,
             createSecurionTransaction: createSecurionTransaction,
-            pokupoReserve: pokupoReserve
+            pokupoReserve: pokupoReserve,
+            createFreeTransaction: createFreeTransaction
         };
 
         return service;
@@ -113,6 +114,20 @@
                 .post(apiUrl + '/api/payment/pay', paymentOptions).then(function(data){
                     defer.resolve(data.data);
                 })
+                .catch(function(err) {
+                    defer.reject(err);
+                });
+
+            return defer.promise;
+        }
+
+        function createFreeTransaction(paymentOptions) {
+            var defer = $q.defer();
+
+            $http
+                .post(apiUrl + '/api/payment/free', paymentOptions).then(function(data){
+                defer.resolve(data.data);
+            })
                 .catch(function(err) {
                     defer.reject(err);
                 });
