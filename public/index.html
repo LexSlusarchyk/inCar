@@ -24,6 +24,7 @@
   <link href="bower_components/ng-cropper/dist/ngCropper.all.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="app.css"> -->
   <link rel="stylesheet" href="content/css/style.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -34,20 +35,20 @@
         <header>
           <!--<a class="logo" ui-sref="home"><img src="content/images/logo_dt.svg"></a>-->
           <a class="logo" ui-sref="home"><img src="content/images/incar-logo.png"></a>
-          <a href="" class="menu-button slide-menu-button"><i class="fa fa-bars"></i></a>
+          <a href="" class="menu-button slide-menu-button" style="color:#F27979;"><i class="fa fa-bars"></i></a>
           <!--<a href="" class="menu-button slide-search-button"><i class="fa fa-search"></i></a>-->
           <div class="header-navigation">
             <ul>
-              <li><a href="" class="menu-button-events">Events</a></li>
-              <li><a ui-sref="news">News</a></li>
-              <li><a ui-sref="texts({id: 'contact'})">Contact Us</a></li>
+              <li><a href="" class="menu-button-events" id="header-nav-link">Events</a></li>
+              <li><a ui-sref="news" id="header-nav-link">News</a></li>
+              <li><a ui-sref="texts({id: 'contact'})" id="header-nav-link">Contact Us</a></li>
               <li data-ng-if="vm.usersService.data.userData.email">
-                <a ui-sref="profile({id: vm.usersService.data.userData.id})">Profile</a>
+                <a ui-sref="profile({id: vm.usersService.data.userData.id})" id="header-nav-link">Profile</a>
               </li>
-              <li><a ui-sref="texts({id: 'about'})">About</a></li>
-              <li><a ui-sref="texts({id: 'faq'})">FAQ</a></li>
+              <li><a ui-sref="texts({id: 'about'})" id="header-nav-link">About</a></li>
+              <li><a ui-sref="texts({id: 'faq'})" id="header-nav-link">FAQ</a></li>
               <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
-                <a ui-sref="dashboard.events">Dashboard</a>
+                <a ui-sref="dashboard.events" id="header-nav-link">Dashboard</a>
               </li>
             </ul>
           </div>

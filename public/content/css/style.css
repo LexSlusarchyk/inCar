@@ -116,7 +116,7 @@ a {
   .header-navigation {
     display: none; } }
 #home-view .container-fluid {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin-left: auto;
   margin-right: auto; }
   #home-view .container-fluid.content-section {
@@ -1011,5 +1011,37 @@ header {
   text-indent: 20px;
 }
 
+#home-header {
+    text-align: center;
+    font-family: Raleway !important;
+    font-style: normal;
+    font-weight: 100 !important;
+    line-height: normal;
+    font-size: 64px !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-top: 60px;
+    padding-bottom: 63px;
+    color: #F27979;
+    position: relative;
+    z-index: 2;
+}
 
+#header-nav-link {
+    padding: 32px 20px 32px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #474747;
+    outline: 0;
+}
+
+#header-nav-link:hover {
+    background-color: #F27979;
+    color: white;
+    transform: skew(-15deg) !important;
+    transition: all 400ms;
+}
 /*# sourceMappingURL=style.css.map */
