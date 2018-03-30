@@ -52,12 +52,12 @@
               </li>
             </ul>
           </div>
-          <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header">
+          <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header" id="sign-in-header">
             <span>Sign In</span>
             <i class="fa fa-sign-in" aria-hidden="true"></i>
           </a>
 
-          <a data-ng-if="vm.usersService.data.userData" data-ng-click="vm.signOut()" class="sign-in-header">
+          <a data-ng-if="vm.usersService.data.userData" data-ng-click="vm.signOut()" class="sign-in-header" id="sign-in-header">
             <span>Sign Out</span>
             <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>

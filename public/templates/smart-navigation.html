@@ -18,7 +18,7 @@
 	<div class="user-thumbnail">
 		<div class="log-in-block">
 			<a class="sign-in-button" href="" data-ng-hide="vm.userData.userData" ng-click="vm.goToState('sign.in')" >
-				<span>Log in</span>
+				<span id="sign-in-header">Log in</span>
 				<span class="sign-in-icon" title="Sign Out">
 					<i class="fa fa-sign-in" aria-hidden="true"></i>
 				</span>
@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="cats-navigation">
-		<p class="sn-header">Select Category:</p>
+		<p class="sn-header" id="sign-in-header">Select Category:</p>
 		<div class="previous-cat-controls">
 			<button ng-show="vm.previouslyActiveCat" ng-click='vm.backToPreviousCat()'  class='btn btn-default'>
 				<span data-ng-bind="vm.previouslyActiveCatName"></span>
