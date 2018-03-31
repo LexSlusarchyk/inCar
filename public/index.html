@@ -39,26 +39,42 @@
           <!--<a href="" class="menu-button slide-search-button"><i class="fa fa-search"></i></a>-->
           <div class="header-navigation">
             <ul>
-              <li><a href="" class="menu-button-events" id="header-nav-link">Events</a></li>
-              <li><a ui-sref="news" id="header-nav-link">News</a></li>
-              <li><a ui-sref="texts({id: 'contact'})" id="header-nav-link">Contact Us</a></li>
+              <li><a href="" class="menu-button-events" id="header-nav-link">{{vm.nav.events}}</a></li>
+              <li><a ui-sref="news" id="header-nav-link">{{vm.nav.news}}</a></li>
+              <li><a ui-sref="texts({id: 'contact'})" id="header-nav-link">{{vm.nav.contact}}</a></li>
               <li data-ng-if="vm.usersService.data.userData.email">
-                <a ui-sref="profile({id: vm.usersService.data.userData.id})" id="header-nav-link">Profile</a>
+                <a ui-sref="profile({id: vm.usersService.data.userData.id})" id="header-nav-link">{{vm.nav.profile}}</a>
               </li>
-              <li><a ui-sref="texts({id: 'about'})" id="header-nav-link">About</a></li>
+              <li><a ui-sref="texts({id: 'about'})" id="header-nav-link">{{vm.nav.about}}</a></li>
               <li><a ui-sref="texts({id: 'faq'})" id="header-nav-link">FAQ</a></li>
               <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
                 <a ui-sref="dashboard.events" id="header-nav-link">Dashboard</a>
               </li>
+              <li>
+                <button id="button-stutus"
+                        type="button"
+                        class="btn btn-link"
+                        data-ng-click="vm.changeLang('RU')"
+                        data-toggle="tooltip" title="PlanningToVisit"
+                >RU</button>
+              </li>
+              <li>
+                <button id="button-stutus"
+                        type="button"
+                        class="btn btn-link"
+                        data-ng-click="vm.changeLang('EN')"
+                        data-toggle="tooltip" title="PlanningToVisit"
+                >EN</button>
+              </li>
             </ul>
           </div>
           <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header" id="sign-in-header">
-            <span>Sign In</span>
+            <span>{{vm.nav.signIn}}</span>
             <i class="fa fa-sign-in" aria-hidden="true"></i>
           </a>
 
           <a data-ng-if="vm.usersService.data.userData" data-ng-click="vm.signOut()" class="sign-in-header" id="sign-in-header">
-            <span>Sign Out</span>
+            <span>{{vm.nav.signOut}}</span>
             <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
         </header>
@@ -136,6 +152,7 @@
   <script src="bower_components/ngstorage/ngStorage.min.js"></script>
   <script src="app.js"></script>
 
+  <script src="Services/translateService.js"></script>
   <script src="Services/globalService.js"></script>
   <script src="Services/categoriesService.js"></script>
   <script src="Services/usersService.js"></script>

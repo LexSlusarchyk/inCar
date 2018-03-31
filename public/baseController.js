@@ -5,13 +5,16 @@
         .module('lnd')
         .controller('BaseController', BaseController);
 
-    BaseController.$inject = ['$rootScope', '$state', 'categoriesService', 'usersService', '$uibModalStack', 'confirmService'];
+    BaseController.$inject = ['$rootScope', '$state', 'categoriesService', 'usersService', '$uibModalStack', 'confirmService', 'translateService'];
     /* @ngInject */
-    function BaseController($rootScope, $state, categoriesService, usersService, $uibModalStack, confirmService) {
+    function BaseController($rootScope, $state, categoriesService, usersService, $uibModalStack, confirmService, translateService) {
         var vm = this;
 
         vm.usersService = usersService;
+        vm.translateService = translateService;
         vm.signOut = signOut;
+        vm.changeLang = changeLang;
+        vm.nav = translateService.data.lang['nav'];
 
         activate();
 
@@ -21,7 +24,16 @@
             $rootScope.$on('token-invalid', function(){
                 throwOut();
             });
+
+            $rootScope.$on('lang-changed', function() {
+                vm.nav = translateService.data.lang['nav'];
+            })
         }
+
+        function changeLang(lang) {
+            translateService.setLang(lang);                
+        }
+
 
         function signOut() {
             var message = 'Are you sure?';
@@ -47,6 +59,7 @@
                 vm.activeCat = vm.tree;
             });
         }
+
     }
 })();
 

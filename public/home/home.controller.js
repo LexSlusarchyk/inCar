@@ -5,10 +5,11 @@
 		.module('lnd')
 		.controller('HomeController', HomeController);
 
-	HomeController.$inject = ['adsService', 'eventsService', 'newsService'];
+	HomeController.$inject = ['$rootScope', 'adsService', 'eventsService', 'newsService', 'translateService'];
 	/* @ngInject */
-	function HomeController(adsService, eventsService, newsService) {
+	function HomeController($rootScope, adsService, eventsService, newsService, translateService) {
 		var vm = this;
+        vm.home = translateService.data.lang['home'];
 
 
 		activate();
@@ -35,6 +36,11 @@
 			newsService.getLastNews().then(function(response) {
 				vm.news = response.data;
 			});
+
+            $rootScope.$on('lang-changed', function() {
+                vm.home = translateService.data.lang['home'];
+            });
+
 		}
 	}
 })();

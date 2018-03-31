@@ -24,9 +24,9 @@
         return directive;
     }
 
-    SmartNavigationController.$inject = ['$state', '$rootScope', '$document', 'usersService', 'geographyService', 'confirmService'];
+    SmartNavigationController.$inject = ['$state', '$rootScope', '$document', 'usersService', 'geographyService', 'confirmService', 'translateService'];
     /* @ngInject */
-    function SmartNavigationController($state, $rootScope, $document, usersService, geographyService, confirmService) {
+    function SmartNavigationController($state, $rootScope, $document, usersService, geographyService, confirmService, translateService) {
         var vm = this;
         var catHistory = [];
         var wrapper = $document.find('.wrapper');
@@ -37,6 +37,7 @@
         vm.goToState = goToState;
         vm.signOut = signOut;
         vm.selectedLocations = [];
+        vm.smartNav = translateService.data.lang['smartNav'];
 
         activate();
 
@@ -63,6 +64,10 @@
 
                 getLocations();
             });
+
+            $rootScope.$on('lang-changed', function() {
+                vm.smartNav = translateService.data.lang['smartNav'];
+            })
         }
 
         function getLocations() {

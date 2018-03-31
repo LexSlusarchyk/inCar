@@ -17,7 +17,7 @@
 						</div>
 					</div>
 					<div class="events-grid">
-						<h1 id="home-header" class="main-section">Latest Events:</h1>
+						<h1 id="home-header" class="main-section">{{vm.home.lastEvents}}:</h1>
 						<div class="container-fluid">
 							<div class="row row-cust-padding">
 								<div class="col-md-4 col-sm-6" data-ng-repeat="event in vm.events track by $index">
@@ -31,7 +31,7 @@
 
 					<div class="container-fluid">
 						<div class="row row-cust-padding">
-							<h1 id="home-header" class="main-section">News:</h1>
+							<h1 id="home-header" class="main-section">{{vm.home.lastNews}}:</h1>
 							<div class="col-md-12" data-ng-repeat="article in vm.news track by article.id">
 								<article-thumbnail data-article="article"
 								></article-thumbnail>

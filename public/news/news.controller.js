@@ -4,9 +4,9 @@
         .module('lnd')
         .controller('NewsController', NewsController);
 
-    NewsController.$inject = ['$state', 'newsService', 'geographyService', 'usersService'];
+    NewsController.$inject = ['$rootScope', '$state', 'newsService', 'geographyService', 'usersService', 'translateService'];
 
-    function NewsController($state, newsService, geographyService, usersService) {
+    function NewsController($rootScope, $state, newsService, geographyService, usersService, translateService) {
         var vm = this;
 
         vm.activeCategoryId = null;
@@ -15,6 +15,7 @@
 //        vm.filterFunction = filterFunction;
         vm.goToArticle = goToArticle;
         vm.changeActiveCategory = changeActiveCategory;
+        vm.langNews = translateService.data.lang['news'];
 
 
 
@@ -33,6 +34,10 @@
             newsService.getCategories().then(function(response) {
                 vm.categories = response.data;
             });
+
+            $rootScope.$on('lang-changed', function() {
+                vm.langNews = translateService.data.lang['news'];
+            })
         }
 
         vm.onBaseOptionChanged = function() {

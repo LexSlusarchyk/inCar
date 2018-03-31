@@ -12,7 +12,7 @@
           <button class="btn btn-default"
                   data-ng-click="vm.changeActiveCategory(null)"
                   data-ng-class="{active: vm.activeCategoryId === null}"
-          >All news</button>
+          >{{vm.langNews.allNews}}</button>
 
           <button data-ng-repeat="category in vm.categories track by category.id"
                   data-ng-bind="category.name"

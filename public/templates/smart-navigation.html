@@ -42,7 +42,7 @@
 	</div>
 
 	<div data-ng-if="vm.isLoggedIn" class="location-multiselect">
-		<p class="sn-header">Select Location:</p>
+		<p class="sn-header" id="sign-in-header">{{vm.smartNav.location}}:</p>
 		<infinite-select data-tree="vm.locations"
 										 data-selected-options-list="vm.selectedLocations"
 										 data-config="vm.multiselectConfig"
@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="cats-navigation">
-		<p class="sn-header" id="sign-in-header">Select Category:</p>
+		<p class="sn-header" id="sign-in-header">{{vm.smartNav.category}}:</p>
 		<div class="previous-cat-controls">
 			<button ng-show="vm.previouslyActiveCat" ng-click='vm.backToPreviousCat()'  class='btn btn-default'>
 				<span data-ng-bind="vm.previouslyActiveCatName"></span>
