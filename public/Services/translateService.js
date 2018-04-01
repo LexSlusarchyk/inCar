@@ -14,7 +14,8 @@
                 lang: {}
             },
             setLang: setLang,
-            changeLang: changeLang
+            changeLang: changeLang,
+            getLocalStorageData: getLocalStorageData
         };
 
 
@@ -150,11 +151,13 @@
                     localStorage.setItem('lang', JSON.stringify(lang));
                     service.data.lang = ruLang;
                     $rootScope.$emit('lang-changed');
+                    console.log("lang changed to RU");
                     break;
                 case 'EN':
                     localStorage.setItem('lang', JSON.stringify(lang));
                     service.data.lang = enLang;
                     $rootScope.$emit('lang-changed');
+                    console.log("lang changed to EN");
                     break;
                 default:
                     alert( 'Я таких значень не знаю' );

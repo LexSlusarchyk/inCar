@@ -1091,3 +1091,10 @@ header {
   text-align: center;
   color: #F27979;
 }
+
+#dashboard-texts>li:nth-child(even) {
+  background-color: lightyellow;
+}
+#dashboard-texts>li:nth-child(even):hover {
+  background-color: lightgray;
+}
