@@ -50,21 +50,19 @@
               <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
                 <a ui-sref="dashboard.events" id="header-nav-link">Dashboard</a>
               </li>
-              <li>
-                <button id="button-stutus"
-                        type="button"
-                        class="btn btn-link"
-                        data-ng-click="vm.changeLang('RU')"
-                        data-toggle="tooltip" title="PlanningToVisit"
-                >RU</button>
+              <li style="margin-left: 50px">
+                <a id="header-nav-link"
+                  href="#"
+                  data-ng-click="vm.changeLang('RU')"
+                  data-toggle="tooltip" title="Включить руский"
+                >RU</a>
               </li>
               <li>
-                <button id="button-stutus"
-                        type="button"
-                        class="btn btn-link"
-                        data-ng-click="vm.changeLang('EN')"
-                        data-toggle="tooltip" title="PlanningToVisit"
-                >EN</button>
+                <a id="header-nav-link"
+                  href="#"
+                  data-ng-click="vm.changeLang('EN')"
+                  data-toggle="tooltip" title="Switch to English"
+                >EN</a>
               </li>
             </ul>
           </div>

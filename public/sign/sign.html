@@ -1,8 +1,8 @@
 <div class="sign-in-container">
 	<div class="sign-in">
 		<ul class="brand-navigation">
-			<li ng-class="{active: path === '/signin'}"><a ui-sref="sign.in"><span>sign in</span></a></li>
-			<li ng-class="{active: path === '/signup'}"><a ui-sref="sign.up"><span>sign up</span></a></li>
+			<li ng-class="{active: path === '/signin'}"><a ui-sref="sign.in"><span ng-controller='SignInController as vm'>{{vm.profile.signIn}}</span></a></li>
+			<li ng-class="{active: path === '/signup'}"><a ui-sref="sign.up"><span ng-controller='SignInController as vm'>{{vm.profile.signUp}}</span></a></li>
 		</ul>
 		<div ui-view></div>
 	</div>

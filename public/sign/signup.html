@@ -3,27 +3,27 @@
 		<p>email</p>
 		<input type="email" data-ng-change="vm.onInputChange"
 					 ng-model="vm.credentials.email"
-					 placeholder="your email here"
+					 placeholder="{{vm.profile.yourEmail}}"
 					 required>
-		<p>password</p>
-		<input type="password" ng-model="vm.credentials.password" placeholder="your password" required>
-		<p>confirm password</p>
-		<input type="password" ng-model="vm.credentials.passwordConfirmation" placeholder="password confirmation" required>
-		<p>physical address	(including country)</p>
-		<input type="text" ng-model="vm.credentials.physicalAddress" placeholder="physical address">
-		<p>XBOX</p>
-		<input class="placeholder-xbox" type="text" ng-model="vm.credentials.userXbox" placeholder="XBOX username">
-		<p>PS4</p>
-		<input class="placeholder-ps" type="text" ng-model="vm.credentials.userPs" placeholder="PS4 username">
-		<p>Steam</p>
-		<input class="placeholder-steam" type="text" ng-model="vm.credentials.userSteam" placeholder="Steam username">
+		<p>{{vm.profile.password}}</p>
+		<input type="password" ng-model="vm.credentials.password" placeholder="{{vm.profile.yourPassword}}" required>
+		<p>{{vm.profile.confirmPasswordHere}}</p>
+		<input type="password" ng-model="vm.credentials.passwordConfirmation" placeholder="{{vm.profile.passwordConfirmaiton}}" required>
+		<p>{{vm.profile.address}}</p>
+		<input type="text" ng-model="vm.credentials.physicalAddress" placeholder="{{vm.profile.address}}">
+
+		<input class="placeholder-xbox" type="text" ng-model="vm.credentials.userXbox" placeholder="{{vm.profile.xboxUsername}}">
+
+		<input class="placeholder-ps" type="text" ng-model="vm.credentials.userPs" placeholder="{{vm.profile.psUsername}}">
+
+		<input class="placeholder-steam" type="text" ng-model="vm.credentials.userSteam" placeholder="{{vm.profile.steamUsername}}">
 		<label class="brand-form-label">
 			<input type="checkbox" class="brand-form-checkbox" required>
-			<span>I'm more than 18 years old.</span>
+			<span>{{vm.profile.yearsOld}}</span>
 		</label>
 
 
-		<input type="submit" value="sign up">
+		<input type="submit" value="{{vm.profile.signUp}}">
 	</form>
 	<div class="error">
 		<p class="text-center duplicate-error" data-ng-show="vm.duplicateError">

@@ -5,32 +5,31 @@
 			<div class="input-group">
 				<p>Email</p>
 				<input type="email" ng-model="vm.user.email" class="form-control" placeholder="email">
-				<p>First Name</p>
+				<p>{{vm.profile.firstName}}</p>
 
-				<input type="text" ng-model="vm.user.firstname" class="form-control" placeholder="First name">
-				<p>Last Name</p>
-				<input type="text" ng-model="vm.user.lastname" class="form-control" placeholder="Last name">
+				<input type="text" ng-model="vm.user.firstname" class="form-control" placeholder="{{vm.profile.firstName}}">
+				<p>{{vm.profile.lastName}}</p>
+				<input type="text" ng-model="vm.user.lastname" class="form-control" placeholder="{{vm.profile.lastName}}">
 
-				<p>Gender</p>
+				<p>{{vm.profile.gender}}</p>
 				<select ng-model="vm.user.gender">
-					<option value="male">Male</option>
-					<option value="female">female</option>
+					<option value="male">{{vm.profile.male}}</option>
+					<option value="female">{{vm.profile.female}}</option>
 				</select>
-				<p>Age</p>
+				<p>{{vm.profile.age}}</p>
 				<input type="number" ng-model="vm.user.age" class="form-control">
 
-				<p>XBOX</p>
-				<input type="text" ng-model="vm.user.userXbox" placeholder="XBOX username" class="form-control">
-				<p>PS4</p>
-				<input type="text" ng-model="vm.user.userPs" placeholder="PS4" class="form-control">
-				<p>Steam</p>
-				<input type="text" ng-model="vm.user.userSteam" placeholder="Steam username" class="form-control">
+				<input type="text" ng-model="vm.user.userXbox" placeholder="{{vm.profile.xboxUsername}}" class="form-control">
 
-				<input type="text" ng-model="vm.user.physicalAddress" placeholder="Physical address including country" class="form-control">
+				<input type="text" ng-model="vm.user.userPs" placeholder="{{vm.profile.psUsername}}" class="form-control">
+
+				<input type="text" ng-model="vm.user.userSteam" placeholder="{{vm.profile.steamUsername}}" class="form-control">
+
+				<input type="text" ng-model="vm.user.physicalAddress" placeholder="{{vm.profile.address}}" class="form-control">
 
 				<!--<input type="text" ng-model="vm.user.country" class="form-control" placeholder="Country">  -->
 
-				<p>Show events in:</p>
+				<p>{{vm.profile.showEvents}}:</p>
 				<infinite-select data-tree="vm.locations"
 								 data-selected-options-list="vm.selectedLocations"
 								 data-config="vm.multiselectConfig"

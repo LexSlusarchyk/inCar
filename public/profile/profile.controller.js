@@ -5,17 +5,19 @@
         .module('lnd')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['$scope', '$state', '$stateParams', 'usersService', 'eventsService',
-        'geographyService', 'confirmService'];
+    ProfileController.$inject = ['$rootScope', '$scope', '$state', '$stateParams', 'usersService', 'eventsService',
+        'geographyService', 'confirmService', 'translateService'];
     /* @ngInject */
-    function ProfileController($scope, $state, $stateParams, usersService, eventsService,
-                               geographyService, confirmService) {
+    function ProfileController($rootScope, $scope, $state, $stateParams, usersService, eventsService,
+                               geographyService, confirmService, translateService) {
         var vm = this;
         var userId = $stateParams.id;
 
         vm.editableImage = false;
 
         vm.signOut = signOut;
+
+        vm.profile = translateService.data.lang['profile'];
 
         activate();
 
@@ -30,6 +32,9 @@
                         console.log('Profile updated.')
                     })
                 }
+            })
+            $rootScope.$on('lang-changed', function() {
+                vm.profile = translateService.data.lang['profile'];
             })
         }
 

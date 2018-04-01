@@ -8,8 +8,8 @@
 				<div class="profile-info">
 					<p ng-bind="vm.user.email" class="profile-user-email"></p>
 					<p class="profile-user-name"><span ng-bind="vm.user.firstname"></span> <span ng-bind="vm.user.lastname"></span></p>
-					<a ui-sref="editprofile({id: vm.user.id})" class="btn btn-default pull-right">Edit</a>
-					<button class="btn btn-default pull-right" data-ng-click="vm.signOut()">Sign Out</button>
+					<a ui-sref="editprofile({id: vm.user.id})" class="btn btn-default pull-right">{{vm.profile.edit}}</a>
+					<button class="btn btn-default pull-right" data-ng-click="vm.signOut()">{{vm.profile.signOut}}</button>
 				</div>
 			</div>
 			<div class="col-md-6">

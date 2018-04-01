@@ -5,13 +5,14 @@
         .module('lnd')
         .controller('EditProfileController', EditProfileController);
 
-    EditProfileController.$inject = ['$scope', '$stateParams', '$state', 'usersService', 'geographyService'];
+    EditProfileController.$inject = ['$rootScope', '$scope', '$stateParams', '$state', 'usersService', 'geographyService', 'translateService'];
     /* @ngInject */
-    function EditProfileController($scope, $stateParams, $state, usersService, geographyService) {
+    function EditProfileController($rootScope, $scope, $stateParams, $state, usersService, geographyService, translateService) {
         var vm = this;
         var userId = $stateParams.id;
         vm.updateUser = updateUser;
         vm.selectedLocations = [];
+        vm.profile = translateService.data.lang['profile'];
 
 
         activate();
@@ -19,6 +20,9 @@
         function activate() {
             getLocations();
             getUser();
+            $rootScope.$on('lang-changed', function() {
+                vm.profile = translateService.data.lang['profile'];
+            })
         }
 
         function getUser() {

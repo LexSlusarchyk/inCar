@@ -24,18 +24,27 @@ angular.module('lnd')
 
 }])
 
-.controller('SignController', ['$scope', '$location', function($scope, $location) {
-    
+.controller('SignController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
+
     
 }])
 
-.controller('SignInController', ['$rootScope', '$scope', '$http', '$state', '$location', 'usersService',
-    function($rootScope, $scope, $http, $state, $location, usersService) {
+.controller('SignInController', ['$rootScope', 'translateService', '$scope', '$http', '$state', '$location', 'usersService',
+    function($rootScope, translateService, $scope, $http, $state, $location, usersService) {
         var vm = this;
         vm.credentials = {};
+        vm.profile = translateService.data.lang['profile'];
 
         vm.login = login;
         vm.onInputChange = onInputChange;
+
+        activate();
+
+        function activate() {
+            $rootScope.$on('lang-changed', function() {
+                vm.profile = translateService.data.lang['profile'];
+            })
+        }
 
         function login(credentials) {
             usersService.signIn(credentials).then(
@@ -55,12 +64,21 @@ angular.module('lnd')
         }
     }])
 
-.controller('SignUpController', ['$scope', '$location', '$state', 'usersService', function($scope, $location, $state, usersService) {
+.controller('SignUpController', ['$rootScope', '$scope', '$location', '$state', 'usersService', 'translateService', function($rootScope, $scope, $location, $state, usersService, translateService) {
     var vm = this;
 
     vm.credentials = {};
     vm.signUp = signUp;
     vm.onInputChange = onInputChange;
+    vm.profile = translateService.data.lang['profile'];
+
+    activate();
+
+    function activate() {
+        $rootScope.$on('lang-changed', function() {
+            vm.profile = translateService.data.lang['profile'];
+        })
+    }
 
      function signUp(credentials) {
         usersService.signUp(credentials).then(function(response){
