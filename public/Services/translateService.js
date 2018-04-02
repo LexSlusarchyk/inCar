@@ -30,8 +30,8 @@
                 signOut: "выйти"
             },
             home: {
-                backgroundMain: "content/images/backgroundMainEN.jpg",
-                backgroundMain2: "content/images/backgroundMain2EN.jpg",
+                backgroundMain: "content/images/backgroundMainRU.jpg",
+                backgroundMain2: "content/images/backgroundMain2RU.jpg",
                 lastEvents: "последние ивенты",
                 lastNews: "новости"
             },
