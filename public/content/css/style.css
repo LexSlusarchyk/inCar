@@ -618,7 +618,7 @@ header {
       width: 100%; }
 
 .event {
-  padding: 16px 8px;
+  padding: 16px 0;
   /*max-width: 1200px;*/
   margin: 0 auto; }
   .event .event-block {
