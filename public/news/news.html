@@ -7,29 +7,45 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2 cust-padding">
+      <h1 id="home-header" class="main-section">{{vm.langNews.newsHeader}}:</h1>
+      <div class="col-md-1 cust-padding"></div>
+
+      <div class="col-md-10 cust-padding">
         <div class="news-categories">
           <button class="btn btn-default"
+                  style="margin-right: 0.7%"
                   data-ng-click="vm.changeActiveCategory(null)"
                   data-ng-class="{active: vm.activeCategoryId === null}"
           >{{vm.langNews.allNews}}</button>
-
           <button data-ng-repeat="category in vm.categories track by category.id"
                   data-ng-bind="category.name"
                   data-ng-click="vm.changeActiveCategory(category.id)"
                   data-ng-class="{active: vm.activeCategoryId === category.id}"
                   class="btn btn-default"
+                  style="margin-right: 1.1%"
           ></button>
         </div>
       </div>
-      <div class="col-md-6 cust-padding">
+
+      <div class="col-md-1 cust-padding"></div>
+
+    </div>
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-md-1 cust-padding"></div>
+
+      <div class="col-md-10 cust-padding">
         <article-thumbnail data-ng-repeat="article in vm.news track by article.id"
                            data-article="article"
         ></article-thumbnail>
       </div>
-      <div class="col-md-offset-1 col-md-3 no-padding">
+
+      <div class="col-md-1 no-padding">
         <audio-item></audio-item>
       </div>
+
     </div>
   </div>
 </div>

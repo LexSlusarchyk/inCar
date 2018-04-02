@@ -1,19 +1,23 @@
+
+
 <div class="event">
 	<div class="container-fluid">
 		<div class="row row-no-padding">
-			<div class="col-md-8">
+			<div class="hidden-xs col-sm-2 col-md-3 event-sidebar-left">
+				<img class="img-responsive" src="../content/images/event-sidebar-left.jpg">
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-6">
 				<div class="event-block">
-					<div class="row row-no-padding">
-						<div class="col-md-4">
-							<div class="event-image">
-								<img ng-src="{{vm.event.imageUrl}}">
-							</div>
-						</div>
-						<div class="col-md-8">
-							<div class="event-header">
-								<h2 ng-bind="vm.event.name"></h2>
-							</div>
-						</div>
+
+					<div class="event-header">
+						<h2 id="event-header" ng-bind="vm.event.name"></h2>
+					</div>
+					<div class="event-image">
+						<img ng-src="{{vm.event.imageUrl}}">
+					</div>
+
+					<div class="event-text">
+						<read-markup markup="vm.event.text"></read-markup>
 					</div>
 					<div class="event-tickets">
 						<div class="row row-cust-padding">
@@ -22,14 +26,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="event-text">
-						<read-markup markup="vm.event.text"></read-markup>
-					</div>
 				</div>
 			</div>
-			<div class="col-sm-offset-1 col-md-3">
-				<audio-item></audio-item>
+			<div class="hidden-xs col-sm-2 col-md-3 event-sidebar-right">
+				<img class="img-responsive" src="../content/images/event-sidebar-right.jpg">
 			</div>
 		</div>
 	</div>
 </div>
+

@@ -41,12 +41,13 @@
                 logIn: "войти"
             },
             news: {
+                newsHeader: "Новости",
                 allNews: "Все новости"
             },
             profile: {
                 signIn: "войти",
                 signOut: "Выйти",
-                editProfile: "Редактировать профиль",
+                editProfile: "Ред. профиль",
                 edit: "Редактировать",
                 yourEmail: "введите ваш email",
                 firstName: "Имя",
@@ -91,6 +92,7 @@
                 logIn: "log in"
             },
             news: {
+                newsHeader: "News",
                 allNews: "All news"
             },
             profile: {

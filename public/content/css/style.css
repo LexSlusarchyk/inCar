@@ -619,7 +619,7 @@ header {
 
 .event {
   padding: 16px 8px;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto; }
   .event .event-block {
     padding: 0 8px;
@@ -893,9 +893,10 @@ header {
   .news .no-padding {
     padding: 0 0; }
   .news .news-categories .btn {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px; }
+    display: inline;
+    width: 23.91%;
+    margin-bottom: 10px;
+    }
     .news .news-categories .btn.active {
       background-color: #F27979;
       color: #fff;
@@ -1089,8 +1090,8 @@ header {
 }
 
 .edit-profile > h2 {
-  font-family: Raleway, sans-serif;
-  font-size: 64px;
+  font-family: DejaVu, sans-serif;
+  font-size: 54px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -1102,4 +1103,28 @@ header {
 }
 #dashboard-texts>li:nth-child(even):hover {
   background-color: lightgray;
+}
+
+@media screen and (max-width: 1150px)  {
+  .news .news-categories .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+#event-header {
+  font-family: DejaVu, sans-serif;
+  font-size: 44px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #F27979;
+}
+
+.event-sidebar-left {
+  padding: 0;
+}
+
+.event-sidebar-right {
+  padding: 0;
 }
