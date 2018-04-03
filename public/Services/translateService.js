@@ -66,7 +66,7 @@
                 steamUsername: "профиль Steam",
                 showEvents: "Показивать ивенты в",
                 yearsOld: "мне больше 18 лет",
-                signUp: "зарегистрироваться"
+                userSignUp: "зарегистрироваться"
             }
         };
 
@@ -115,7 +115,7 @@
                 steamUsername: "Steam username",
                 showEvents: "Show events in",
                 yearsOld: "I'm more than 18 years old",
-                signUp: "sign up"
+                userSignUp: "sign up"
             }
         };
 
