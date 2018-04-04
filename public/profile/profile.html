@@ -1,4 +1,56 @@
 <div class="profile-block">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="profile-header">
+					<br>
+					<h1 id="event-header">{{vm.profile.profile}}:</h1>
+					<div id="profile-photo">
+						<select-image image="vm.image" editable="vm.editableImage"></select-image>
+					</div>
+					<div class="row">
+						<div class="col-md-12" id="profile-info">
+
+							<p class="text-center" ng-bind="vm.user.email" class="profile-user-email"></p>
+							<p class="text-center">{{vm.profile.firstName}}: <span ng-bind="vm.user.firstname"></span></p>
+							<p class="text-center">{{vm.profile.lastName}}: <span ng-bind="vm.user.lastname"></span></p>
+
+							<p class="text-center" ng-show="vm.countryLabel">{{vm.profile.showEvents}}: <span ng-bind="vm.countryLabel"></span></p>
+							<p class="text-center" ng-show="vm.user.age">{{vm.profile.age}}: <span ng-bind="vm.user.age"></span></p>
+							<p class="text-center" ng-show="vm.user.gender">{{vm.profile.gender}}: <span ng-bind="vm.user.gender"></span></p>
+							<p class="text-center" ng-show="vm.user.userXbox"><span><img data-ng-src="../content/images/xbox-icon.png"></span> <span ng-bind="vm.user.userXbox"></span></p>
+							<p class="text-center" ng-show="vm.user.userPs"><span><img data-ng-src="../content/images/PS3-sixaxis-icon.png"></span> <span ng-bind="vm.user.userPs"></span></p>
+							<p class="text-center" ng-show="vm.user.userSteam"><span><img data-ng-src="../content/images/Steam-icon.png"></span> <span ng-bind="vm.user.userSteam"></span></p>
+
+							<br>
+							<div class="text-center">
+								<a ui-sref="editprofile({id: vm.user.id})" class="btn btn-default" id="btn-profile">{{vm.profile.edit}}</a>
+								<button class="btn btn-default" id="btn-profile" data-ng-click="vm.signOut()">{{vm.profile.signOut}}</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<br>
+				<h1 id="event-header">{{vm.profile.yourEvents}}:</h1>
+				<br>
+				<div class="users-events">
+					<div class="container-fluid">
+						<div class="row row-cust-padding">
+							<div class="col-md-3 col-sm-4" data-ng-repeat="event in vm.events track by $index">
+								<event-thumbnail event="event" index="$index"><event-thumbnail>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--
 	<div class="profile-header">
 		<div class="row">
 			<div class="col-md-6">
@@ -33,6 +85,7 @@
 			</div>
 		</div>
 	</div>
+-->
 </div>
 	
 

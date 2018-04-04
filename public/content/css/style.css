@@ -414,8 +414,7 @@ header {
 .profile-block .select-image-overlay {
   border-radius: 50%; }
 .profile-block .profile-photo {
-  display: inline-block;
-  float: left;
+  display: block;
   overflow: hidden;
   width: 200px;
   height: 200px;
@@ -1128,3 +1127,40 @@ header {
 .event-sidebar-right {
   padding: 0;
 }
+
+#profile-photo {
+  margin: 20px auto 50px auto;
+  display: block;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+#profile-photo img {
+  border-radius: 50%;
+}
+
+#btn-profile {
+  padding: 20px 20px 20px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: white;
+  outline: 0;
+  background-color: #F27979;
+  transform: skew(-10deg);
+  width: 100px;
+  margin-right: 20px;
+}
+
+#btn-profile:hover {
+  background-color: rgba(242,121,121, 0.8);
+
+}
+#profile-info p {
+  border-bottom: 2px solid black;
+  margin: 20px 25% 0 25%;
+}
+

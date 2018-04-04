@@ -45,10 +45,12 @@
                 allNews: "Все новости"
             },
             profile: {
+                profile: "ПРОФИЛЬ",
+                yourEvents: "ВАШИ ИВЕНТЫ",
                 signIn: "войти",
                 signOut: "Выйти",
                 editProfile: "Ред. профиль",
-                edit: "Редактировать",
+                edit: "Ред.",
                 yourEmail: "введите ваш email",
                 firstName: "Имя",
                 lastName: "Фамилия",
@@ -96,11 +98,15 @@
                 allNews: "All news"
             },
             profile: {
+                profile: "PROFILE",
+                yourEvents: "YOUR EVENTS",
                 signIn: "login",
                 signOut: "Sign Out",
                 editProfile: "edit profile",
                 edit: "Edit",
                 yourEmail: "your email here",
+                firstName: "First name",
+                lastName: "Last name",
                 password: "password",
                 yourPassword: "your password",
                 confirmPasswordHere: "confirm password here",
