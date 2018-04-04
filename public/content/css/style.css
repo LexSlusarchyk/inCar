@@ -197,11 +197,11 @@ a {
     line-height: 45px;
     border: 2px solid transparent;
     margin: 15px 0;
-    color: #fff; }
+    color: black; }
     .brand-form input:not([type="checkbox"])::-webkit-input-placeholder {
-      color: #fff; }
+      color: black; }
     .brand-form input:not([type="checkbox"])::-moz-placeholder {
-      color: #fff; }
+      color: black; }
     .brand-form input:not([type="checkbox"])[type="submit"] {
       background-color: #F27979;
       color: #fff;
@@ -219,7 +219,7 @@ a {
         outline: none;
         border: 2px solid #fff; }
   .brand-form p {
-    color: #fff;
+    color: black;
     padding-left: 35px;
     text-transform: uppercase;
     font-size: 12px;
@@ -248,7 +248,7 @@ a {
     border-radius: 45px;
     line-height: 45px;
     width: 100%;
-    color: #fff;
+    color: black;
     cursor: pointer;
     padding-left: 35px;
     font-weight: normal;
