@@ -81,11 +81,13 @@ angular.module('lnd')
     }
 
      function signUp(credentials) {
+        vm.credentials.isActivated = 1;
         usersService.signUp(credentials).then(function(response){
             console.log(response);
             if (response.data && response.data.code === "ER_DUP_ENTRY") {
                 vm.duplicateError = true;
             } else {
+                alert('We are glad you have chosen to be a part of our community and we hope you enjoy your stay. Now you can start to use our services by going to events section of  website. Thank you for registering with us.');
                 $state.go('sign.in');
             }
 
