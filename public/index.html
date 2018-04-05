@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css">
   <link href="bower_components/ng-cropper/dist/ngCropper.all.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="app.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="content/css/style.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -38,13 +39,13 @@
           <!--<a href="" class="menu-button slide-search-button"><i class="fa fa-search"></i></a>-->
           <div class="header-navigation">
             <ul>
-              <li><a href="" class="menu-button-events" id="header-nav-link">{{vm.nav.events}}</a></li>
-              <li><a ui-sref="news" id="header-nav-link">{{vm.nav.news}}</a></li>
-              <li><a ui-sref="texts({id: 'contact'})" id="header-nav-link">{{vm.nav.contact}}</a></li>
+              <li><a href="" data-ng-bind="vm.nav.events" class="menu-button-events" id="header-nav-link"></a></li>
+              <li><a ui-sref="news" data-ng-bind="vm.nav.news" id="header-nav-link"></a></li>
+              <li><a ui-sref="texts({id: 'contact'})" data-ng-bind="vm.nav.contact" id="header-nav-link"></a></li>
               <li data-ng-if="vm.usersService.data.userData.email">
-                <a ui-sref="profile({id: vm.usersService.data.userData.id})" id="header-nav-link">{{vm.nav.profile}}</a>
+                <a ui-sref="profile({id: vm.usersService.data.userData.id})" data-ng-bind="vm.nav.profile" id="header-nav-link"></a>
               </li>
-              <li><a ui-sref="texts({id: 'about'})" id="header-nav-link">{{vm.nav.about}}</a></li>
+              <li><a ui-sref="texts({id: 'about'})" data-ng-bind="vm.nav.about" id="header-nav-link"></a></li>
               <li><a ui-sref="texts({id: 'faq'})" id="header-nav-link">FAQ</a></li>
               <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
                 <a ui-sref="dashboard.events" id="header-nav-link">Dashboard</a>
@@ -66,12 +67,12 @@
             </ul>
           </div>
           <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header" id="sign-in-header">
-            <span>{{vm.nav.signIn}}</span>
+            <span data-ng-bind="vm.nav.signIn"></span>
             <i class="fa fa-sign-in" aria-hidden="true"></i>
           </a>
 
           <a data-ng-if="vm.usersService.data.userData" data-ng-click="vm.signOut()" class="sign-in-header" id="sign-in-header">
-            <span>{{vm.nav.signOut}}</span>
+            <span data-ng-bind="vm.nav.signOut"></span>
             <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
         </header>

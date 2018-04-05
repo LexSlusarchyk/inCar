@@ -34,9 +34,23 @@
         activate();
 
         function activate() {
+            // categoriesService.getCat(vm.event.catId).then(function(response){
+            //     vm.event.cat = response.data.name;
+            // });
             categoriesService.getCat(vm.event.catId).then(function(response){
-                vm.event.cat = response.data.name;
+                var catParent = response.data.parent;
+
+                categoriesService.getCat(catParent).then(function(response){
+                    vm.event.cat = response.data.name;
+                    var catMain = response.data.parent;
+
+                    categoriesService.getCat(catMain).then(function(response){
+                        vm.event.catMain = response.data.name;
+                        // console.log(vm.event.catMain);
+                    });
+                });
             });
+
         }
 
         function formatEventDate() {

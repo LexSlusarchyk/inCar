@@ -32,7 +32,7 @@
             home: {
                 backgroundMain: "content/images/backgroundMainRU.jpg",
                 backgroundMain2: "content/images/backgroundMain2RU.jpg",
-                lastEvents: "последние ивенты",
+                lastEvents: "ближайшие ивенты",
                 lastNews: "новости"
             },
             smartNav: {
@@ -132,7 +132,7 @@
 
         function getLocalStorageData() {
             var storedData = JSON.parse(localStorage.getItem('lang'));
-            console.log(storedData);
+            // console.log(storedData);
             var lang = storedData ? storedData : null;
             return lang;
         }
@@ -165,7 +165,7 @@
                     localStorage.setItem('lang', JSON.stringify(lang));
                     service.data.lang = enLang;
                     $rootScope.$emit('lang-changed');
-                    console.log("lang changed to EN");
+                    // console.log("lang changed to EN");
                     break;
                 default:
                     alert( 'Я таких значень не знаю' );

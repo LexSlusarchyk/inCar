@@ -38,7 +38,7 @@ function getAllEvents(req, res) {
 
 function getLastEvents(req, res) {
 	var date = 'WHERE date >= CURDATE()';
-	var query = 'Select * FROM events ORDER BY id DESC LIMIT 6';
+	var query = 'Select * FROM events ORDER BY id DESC LIMIT 8';
 	req.getConnection(function(err, connection) {
 		if (err) return res.send(err);
 		connection.query(query, function(err, results){

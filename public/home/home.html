@@ -1,10 +1,10 @@
 <section id="home-view">
-	<div class="container-fluid"><img data-ng-src="{{vm.home.backgroundMain}}" style="width:100%;"></div>
-	<div data-ng-if="vm.mainAudio" class="main-audio-wrap" back-cover="{{vm.mainAudio.wallpaper}}">
-		<a data-ng-if="vm.mainAudio.title" class="main-audio-title" ng-href="{{vm.isMainAudio.url || '#'}}">
-			<h1 data-ng-bind="vm.mainAudio.title"></h1>
-		</a>
-	</div>
+	<!--<div class="container-fluid"></div>-->
+	<!--<div data-ng-if="vm.mainAudio" class="main-audio-wrap" back-cover="{{vm.mainAudio.wallpaper}}">-->
+		<!--<a data-ng-if="vm.mainAudio.title" class="main-audio-title" ng-href="{{vm.isMainAudio.url || '#'}}">-->
+			<!--<h1 data-ng-bind="vm.mainAudio.title"></h1>-->
+		<!--</a>-->
+	<!--</div>-->
 
 		<div class="container-fluid content-section">
 
@@ -16,28 +16,29 @@
 							></div>
 						</div>
 					</div>
-					<div class="events-grid">
+					<div class="events-grid" id="events-grid">
 						<h1 id="home-header" class="main-section">{{vm.home.lastEvents}}:</h1>
 						<div class="container-fluid">
 							<div class="row row-cust-padding">
-								<div class="col-md-4 col-sm-6" data-ng-repeat="event in vm.events track by $index">
+
+								<div class="col-md-3 col-sm-12 events-row" data-ng-repeat="event in vm.events track by $index">
 									<event-thumbnail event="event" index="$index"><event-thumbnail>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="container-fluid"><img data-ng-src="{{vm.home.backgroundMain2}}" style="width:100%;"></div>
+					<div class="container-fluid" style="padding:0;"><img data-ng-src="{{vm.home.backgroundMain}}" style="width:100%;"></div>
 
-					<div class="container-fluid">
-						<div class="row row-cust-padding">
-							<h1 id="home-header" class="main-section">{{vm.home.lastNews}}:</h1>
-							<div class="col-md-12" data-ng-repeat="article in vm.news track by article.id">
-								<article-thumbnail data-article="article"
-								></article-thumbnail>
-							</div>
-						</div>
-					</div>
+					<!--<div class="container-fluid">-->
+						<!--<div class="row row-cust-padding">-->
+							<!--<h1 id="home-header" class="main-section">{{vm.home.lastNews}}:</h1>-->
+							<!--<div class="col-md-12" data-ng-repeat="article in vm.news track by article.id">-->
+								<!--<article-thumbnail data-article="article"-->
+								<!--&gt;</article-thumbnail>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
 
 
 
