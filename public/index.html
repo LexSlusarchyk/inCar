@@ -50,22 +50,26 @@
               <li data-ng-if="vm.usersService.data.userData.role === 'admin'">
                 <a ui-sref="dashboard.events" id="header-nav-link">Dashboard</a>
               </li>
-              <li style="margin-left: 50px">
-                <a id="header-nav-link"
-                  href="#"
-                  data-ng-click="vm.changeLang('RU')"
-                  data-toggle="tooltip" title="Включить руский"
-                >RU</a>
-              </li>
-              <li>
-                <a id="header-nav-link"
-                  href="#"
-                  data-ng-click="vm.changeLang('EN')"
-                  data-toggle="tooltip" title="Switch to English"
-                >EN</a>
-              </li>
+              <span id="header-nav-lang">
+                <li>
+                  <a id="header-nav-link"
+                     href="#"
+                     data-ng-click="vm.changeLang('RU')"
+                     data-toggle="tooltip" title="Включить руский"
+                  >RU</a>
+                </li>
+                <li>
+                  <a id="header-nav-link"
+                     href="#"
+                     data-ng-click="vm.changeLang('EN')"
+                     data-toggle="tooltip" title="Switch to English"
+                  >EN</a>
+                </li>
+              </span>
             </ul>
+
           </div>
+
           <a data-ng-if="!vm.usersService.data.userData" ui-sref="sign.in" class="sign-in-header" id="sign-in-header">
             <span data-ng-bind="vm.nav.signIn"></span>
             <i class="fa fa-sign-in" aria-hidden="true"></i>

@@ -5,9 +5,9 @@
 		.module('lnd')
 		.controller('HomeController', HomeController);
 
-	HomeController.$inject = ['$rootScope', 'adsService', 'eventsService', 'newsService', 'translateService'];
+	HomeController.$inject = ['$rootScope', 'adsService', 'eventsService', 'translateService'];
 	/* @ngInject */
-	function HomeController($rootScope, adsService, eventsService, newsService, translateService) {
+	function HomeController($rootScope, adsService, eventsService, translateService) {
 		var vm = this;
         vm.home = translateService.data.lang['home'];
 
