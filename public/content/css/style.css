@@ -1226,7 +1226,7 @@ header .header-navigation ul li.active a:before {
 
 #header-nav-lang {
   position: absolute;
-  right: 90px;
+  right: 110px;
   top: 10px;
 }
 #header-nav-lang li {
@@ -1235,7 +1235,7 @@ header .header-navigation ul li.active a:before {
 
 
 
-@media screen and (max-width: 990px)  {
+@media screen and (max-width: 1222px)  {
   #header-nav-lang {
     display: none;
   }
