@@ -30,8 +30,9 @@
                 signOut: "выйти"
             },
             home: {
-                backgroundMain: "content/images/backgroundMainRU.jpg",
-                backgroundMain2: "content/images/backgroundMain2RU.jpg",
+                textFirst: "Представляем InCAR, новую гоночную платформу, которая изменит автомобильный киберспорт. Наш ресурс объединяет все самые популярный автомобильные симуляторы. Участвуйте в онлайн гонке со своими друзьями и почувствуйте дрожь в борьбе за реальные призы в одном из наших многочисленных турниров.",
+                textSecound:"C нами автомобильные симуляторы выходят на новый уровень увлекательности!",
+                follow: "МЫ В СОЦ.СЕТЯХ:",
                 lastEvents: "ближайшие ивенты",
                 lastNews: "новости"
             },
@@ -83,8 +84,9 @@
                 signOut: "Sign Out"
             },
             home: {
-                backgroundMain: "content/images/backgroundMainEN.jpg",
-                backgroundMain2: "content/images/backgroundMain2EN.jpg",
+                textFirst: "Have you ever watched Formula 1 and seen those speed demons roaring around the track at breakneck speeds so quickly even you’re getting an adrenaline rush just watching? Ever put your car to the very limit of its top speed on virtually any video game imaginable and felt that buzz of excitement beating your friends to the chequered flag and trophy at the end?",
+                textSecound:"Well now that trophy could be yours for real.",
+                follow: "FOLLOW US:",
                 lastEvents: "latest events",
                 lastNews: "news"
             },

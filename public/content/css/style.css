@@ -199,7 +199,7 @@ a {
     margin: 15px 0;
     color: black; }
     .brand-form input:not([type="checkbox"])::-webkit-input-placeholder {
-      color: black; }
+      color: #777777; }
     .brand-form input:not([type="checkbox"])::-moz-placeholder {
       color: black; }
     .brand-form input:not([type="checkbox"])[type="submit"] {
@@ -1233,13 +1233,70 @@ header .header-navigation ul li.active a:before {
   padding: 0;
 }
 
-
-
 @media screen and (max-width: 1222px)  {
   #header-nav-lang {
     display: none;
   }
-
 }
 
+#home-background {
+  position	: relative;
+}
 
+.home-follow {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.home-follow-text {
+  padding-bottom: 20px;
+}
+
+.home-follow-text > h2 {
+  text-align: center;
+  font-family: DejaVu, sans-serif !important;
+  font-style: normal;
+  font-weight: 100 !important;
+  line-height: normal;
+  font-size: 44px !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #F27979;
+}
+.home-follow-us {
+  font-family: DejaVu, sans-serif !important;
+  font-style: normal;
+  font-weight: 100 !important;
+  line-height: normal;
+  font-size: 24px !important;
+  letter-spacing: 0.03em;
+  color: #F27979;
+}
+
+.social-img {
+  margin: 0 5px 0 5px;
+}
+
+.social-img:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1159px)  {
+  .home-follow-text{
+    background-color: rgba(255,255,255, 0.6);
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  .home-follow-text > h2 {
+    font-size: 14px !important;
+  }
+  .home-follow-us {
+    font-size: 12px !important;
+    font-weight: 250 !important;
+  }
+  .home-follow-text > p{
+    font-size: 10px;
+  }
+}
