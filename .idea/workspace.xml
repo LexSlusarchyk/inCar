@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="434d5a0a-d7c2-4c29-b403-2d7f8f6ac43e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/content/images/Facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/content/images/Instagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/content/images/Twiter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/content/images/backgroundMain2E.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Services/translateService.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Services/translateService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/content/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/content/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/content/images/backgroundMain2EN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/content/images/backgroundMainEN.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/content/images/backgroundMainEN.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <list id="50344425-ed56-44ef-8865-120bba63c555" name="aws" comment="" />
     <ignored path="express.iws" />
@@ -41,24 +33,12 @@
     <favorites_list name="express" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="39" column="93" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="42" column="49" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="49" />
+            <state relative-caret-position="252">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -66,28 +46,42 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/content/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="22536">
               <caret line="1252" column="19" selection-start-line="1252" selection-start-column="19" selection-end-line="1252" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="translateService.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/Services/translateService.js">
+      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/users/models/User.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="88" column="35" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+            <state relative-caret-position="795">
+              <caret line="212" selection-start-line="212" selection-end-line="212" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/home/home.controller.js">
+      <file leaf-file-name="usersController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/users/controllers/usersController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+            <state relative-caret-position="594">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/sign/sign.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1602">
+              <caret line="89" column="226" selection-start-line="89" selection-start-column="226" selection-end-line="89" selection-end-column="226" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usersService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Services/usersService.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -183,10 +177,10 @@
         <option value="$PROJECT_DIR$/core/settings.json" />
         <option value="$PROJECT_DIR$/public/home/home.controller.js" />
         <option value="$PROJECT_DIR$/public/events/events.html" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/content/css/style.css" />
         <option value="$PROJECT_DIR$/public/home/home.html" />
         <option value="$PROJECT_DIR$/public/Services/translateService.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -248,7 +242,7 @@
       <path value="$PROJECT_DIR$/public/content/css/app/bower_components/angular/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1438" />
@@ -273,54 +267,39 @@
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="configs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="events" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="events" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="users" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="profile" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
@@ -332,7 +311,13 @@
               <item name="express" type="b2602c69:ProjectViewProjectNode" />
               <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sign" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="incar" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="texts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -499,6 +484,10 @@
       <workItem from="1523458177546" duration="3159000" />
       <workItem from="1523462401988" duration="579000" />
       <workItem from="1523463014548" duration="9574000" />
+      <workItem from="1523524009555" duration="1422000" />
+      <workItem from="1523544248854" duration="1471000" />
+      <workItem from="1523552094849" duration="3039000" />
+      <workItem from="1523605461853" duration="208000" />
     </task>
     <task id="LOCAL-00033" summary="aws deploy">
       <created>1491432654238</created>
@@ -847,7 +836,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365538000" />
+    <option name="totallyTimeSpent" value="371678000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -869,7 +858,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32932693" />
       <window_info id="npm" order="2" sideWeight="0.5172775" side_tool="true" weight="0.14593698" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49753347" weight="0.21361257" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48272252" visible="true" weight="0.17523494" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48272252" visible="true" weight="0.1840796" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.21890548" />
       <window_info id="Structure" order="1" sideWeight="0.4740533" side_tool="true" weight="0.249309" />
@@ -890,20 +879,20 @@
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info id="npm" order="2" sideWeight="0.5172775" side_tool="true" weight="0.14593698" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32932693" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48272252" visible="true" weight="0.17523494" />
       <window_info id="Structure" order="1" sideWeight="0.4740533" side_tool="true" weight="0.249309" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49753347" weight="0.32738718" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32738718" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972714" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="11" weight="0.32984293" />
       <window_info anchor="right" id="Database" order="3" weight="0.21890548" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49753347" weight="0.21361257" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5024665" side_tool="true" weight="0.32879582" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Version Control" order="4" sideWeight="0.513089" side_tool="true" weight="0.12990603" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -991,17 +980,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/content/css/dashboard.scss">
+    <entry file="file://$PROJECT_DIR$/modules/users/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        <state relative-caret-position="3816">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dashboard/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/modules/users/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="107" lean-forward="true" selection-start-line="10" selection-start-column="107" selection-end-line="10" selection-end-column="107" />
+        <state relative-caret-position="3816">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/users/controllers/usersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1044,13 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/texts/texts.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="10" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1106,13 +1095,6 @@
         <state relative-caret-position="-287" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/configs/auth.middlware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/sign/signin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1148,32 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="38" column="40" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/sign/sign.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="89" column="226" selection-start-line="89" selection-start-column="226" selection-end-line="89" selection-end-column="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Services/usersService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/users/models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/users/controllers/usersController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="123" column="65" selection-start-line="123" selection-start-column="50" selection-end-line="123" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1247,13 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/configs/express-server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Directives/eventThumbnailDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1282,22 +1231,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/templates/event-thumbnail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="110" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="110" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/content/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/home/home.controller.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1306,34 +1245,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/content/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="1252" column="19" selection-start-line="1252" selection-start-column="19" selection-end-line="1252" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="42" column="49" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="702">
           <caret line="39" column="93" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/Services/translateService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="88" column="35" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+        <state relative-caret-position="1620">
+          <caret line="90" column="32" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/texts/texts.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="10" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/configs/express-server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/configs/auth.middlware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/content/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22536">
+          <caret line="1252" column="19" selection-start-line="1252" selection-start-column="19" selection-end-line="1252" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Services/usersService.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sign/sign.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="226" selection-start-line="89" selection-start-column="226" selection-end-line="89" selection-end-column="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/users/controllers/usersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/users/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
