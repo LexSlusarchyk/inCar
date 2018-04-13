@@ -13,7 +13,8 @@ module.exports = {
     list,
     getUser,
     updateUser,
-    activate
+    activate,
+    requestPasswordChange
 };
 
 
@@ -66,6 +67,67 @@ function signUp(req, res) {
         })      
     })
 }
+
+
+
+
+
+function requestPasswordChange(req, res) {
+
+
+
+    var query = "SELECT * FROM users WHERE email='" + req.body.email + "' AND isActivated='1';";
+
+    var user;
+    req.getConnection(function(err, connection) {
+        if (err) return res.sendStatus(500);
+        connection.query(query, function(err, results){
+            if (err) return res.sendStatus(500);
+            user = results[0];
+
+            console.log(user.id);
+
+            var token = uuid.v4();
+            var tokenCreateQuery = 'INSERT INTO usertokens (userId, token) VALUES("'
+                + user.id + '" , "' + token + '")';
+            connection.query(tokenCreateQuery, function(err, results){
+                if (err) return res.send(err);
+                sendEmailVerification(token);
+            });
+
+            return res.sendStatus(200);
+        })
+    })
+
+
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'incar.online@gmail.com',
+            pass: 'rapass11'
+        }
+    });
+
+    function sendEmailVerification(token) {
+        var html = '<h3>Incar Online</h3>' +
+            '<p>Recently you tried recover password in our application using this email address.</p>' +
+            '<p>Please follow the link below to continue.</p>' +
+            '<p><a href="http://www.incar.online/set-new-password/' + token +'">Change password</a></p>' +
+            '<p>If you didn\'t register in our application using this email address, just ignore this message.</p>';
+
+        transporter.sendMail({
+            to: user.email,
+            subject: 'Recover Password',
+            html: html,
+            text: 'hello world!'
+        });
+    }
+
+
+}
+
+
+
 
 function login(req, res) {
     var user = new User(req.body);

@@ -36,6 +36,7 @@
         vm.backToPreviousCat = backToPreviousCat;
         vm.goToState = goToState;
         vm.signOut = signOut;
+        vm.changeLang = changeLang;
         vm.selectedLocations = [];
         vm.smartNav = translateService.data.lang['smartNav'];
 
@@ -68,6 +69,10 @@
             $rootScope.$on('lang-changed', function() {
                 vm.smartNav = translateService.data.lang['smartNav'];
             })
+        }
+
+        function changeLang(lang) {
+            translateService.setLang(lang);
         }
 
         function getLocations() {

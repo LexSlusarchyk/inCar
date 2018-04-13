@@ -6,7 +6,7 @@ module.exports = authMiddlware;
 function authMiddlware(req, res, next) {
     var authHeader = req.headers.authorization;
 
-    if (req.url === '/api/users/login' || req.url === '/api/users/signup'
+    if (req.url === '/api/users/login' || req.url === '/api/users/signup' || req.url === '/api/users/reset'
         || req.url === '/api/payment/pay' || req.url === '/api/payment/free' || req.url === '/api/payment/securion'
     || req.url === '/api/payment/pokupo-confirm' || req.url === '/api/payment/pokupo-reserve') {
         return next();

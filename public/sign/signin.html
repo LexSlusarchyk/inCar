@@ -11,6 +11,12 @@
 					 ng-change="vm.onInputChange()"
 					 placeholder="{{vm.profile.yourPassword}}">
 		<input type="submit" value="{{vm.profile.signIn}}">
+		<div class="text-center">
+			<a ui-sref="forgot-password"
+				class="btn-link btn">
+				Forgot password?
+			</a>
+		</div>
 		<p class="text-center" data-ng-if="vm.error" data-ng-bind="vm.error"></p>
 	</form>
 </div>

@@ -1048,6 +1048,12 @@ header {
     position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  #header-nav-link {
+    padding: 32px 5px 32px 5px;
+  }
+}
+
 #header-nav-link:hover {
     color: white;
 }
@@ -1233,9 +1239,18 @@ header .header-navigation ul li.active a:before {
   padding: 0;
 }
 
-@media screen and (max-width: 1222px)  {
+#slide-navigation-lang {
+  display: none;
+}
+
+@media screen and (max-width: 880px)  {
+
   #header-nav-lang {
     display: none;
+  }
+
+  #slide-navigation-lang {
+    display: block;
   }
 }
 
@@ -1294,9 +1309,9 @@ header .header-navigation ul li.active a:before {
   }
   .home-follow-us {
     font-size: 12px !important;
-    font-weight: 250 !important;
   }
   .home-follow-text > p{
     font-size: 10px;
   }
 }
+

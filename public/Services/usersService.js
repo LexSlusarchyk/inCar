@@ -20,7 +20,8 @@
             signOut: signOut,
             updateProfile: updateProfile,
             getUsersList: getUsersList,
-            getUser: getUser
+            getUser: getUser,
+            requestPasswordChange: requestPasswordChange
         };
 
         getLocalStorageData();
@@ -60,6 +61,15 @@
             $http.post(apiUrl + '/api/users/signup', credentials).then(function(data){
                 defered.resolve(data);
             });
+            return defered.promise;
+        }
+
+        function requestPasswordChange(email) {
+            var defered = $q.defer();
+            $http.post(apiUrl + '/api/users/reset', {email: email}).then(function(data){
+                defered.resolve(data);
+            });
+
             return defered.promise;
         }
 

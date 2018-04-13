@@ -2,16 +2,17 @@
 	<img class="slide-menu-logo" src="content/images/incar-logo.png">
 
 	<div class="navigation-pages">
-		<p class="sn-header">Navigation:</p>
+		<p class="sn-header" data-ng-bind="vm.smartNav.navigation"></p>
 		<div class="pages-list">
 			<a href="" data-ng-if="vm.isAdmin" ng-click="vm.goToState('dashboard.events')">Dashboard</a>
-			<a href="" data-ng-if="vm.isLoggedIn" ng-click="vm.goToState('profile', {id: vm.userData.userData.id})">Profile</a>
-			<a href="" ng-click="vm.goToState('tickets')">My tickets</a>
-			<a href="" ng-click="vm.goToState('news')">News</a>
-			<a href="" ng-click="vm.goToState('texts', {id: 'contact'})">Contact Us</a>
-			<a href="" ng-click="vm.goToState('texts', {id: 'about'})">About</a>
+			<a href="" data-ng-if="vm.isLoggedIn" ng-click="vm.goToState('profile', {id: vm.userData.userData.id})" data-ng-bind="vm.smartNav.profile"></a>
+			<!--<a href="" ng-click="vm.goToState('tickets')">My tickets</a>-->
+			<a href="" ng-click="vm.goToState('news')" data-ng-bind="vm.smartNav.news"></a>
+			<a href="" ng-click="vm.goToState('texts', {id: 'contact'})" data-ng-bind="vm.smartNav.contact"></a>
+			<a href="" ng-click="vm.goToState('texts', {id: 'about'})" data-ng-bind="vm.smartNav.about"></a>
 			<a href="" ng-click="vm.goToState('texts', {id: 'faq'})">FAQ</a>
 		</div>
+
 	</div>
 
 
@@ -50,6 +51,24 @@
 		></infinite-select>
 	</div>
 
+	<div class="cats-navigation" id="slide-navigation-lang">
+		<p class="sn-header" id="sign-in-header">{{vm.smartNav.switchLang}}:</p>
+		<ul class="slide-navigation">
+			<li>
+				<a href="#"
+				   data-ng-click="vm.changeLang('RU')"
+				   data-toggle="tooltip" title="Включить руский"
+				>RU</a>
+			</li>
+			<li>
+				<a href="#"
+				   data-ng-click="vm.changeLang('EN')"
+				   data-toggle="tooltip" title="Switch to English"
+				>EN</a>
+			</li>
+		</ul>
+	</div>
+
 	<div class="cats-navigation">
 		<p class="sn-header" id="sign-in-header">{{vm.smartNav.category}}:</p>
 		<div class="previous-cat-controls">
@@ -65,5 +84,9 @@
 			</li>
 		</ul>
 	</div>
+
+	<br><br>
+
+
 
 </div>

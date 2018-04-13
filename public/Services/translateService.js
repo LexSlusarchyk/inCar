@@ -37,6 +37,13 @@
                 lastNews: "новости"
             },
             smartNav: {
+                navigation: "Навигацыя:",
+                events: "ивенты",
+                news: "Новости",
+                contact: "Контакты",
+                profile: "Профиль",
+                about: "О нас",
+                switchLang: "сменить язык",
                 category: "выберете категорию",
                 location: "выберите регион",
                 logIn: "войти"
@@ -91,6 +98,13 @@
                 lastNews: "news"
             },
             smartNav: {
+                navigation: "Navigation:",
+                events: "Events",
+                news: "News",
+                contact: "Contact Us",
+                profile: "Profile",
+                about: "About",
+                switchLang: "Change language",
                 category: "select category",
                 location: "select location",
                 logIn: "log in"
