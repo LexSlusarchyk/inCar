@@ -11,3 +11,4 @@ app.get('/api/users/activate/:token', usersController.activate);
 app.put('/api/users', usersController.updateUser);
 
 app.post('/api/users/reset', usersController.requestPasswordChange);
+app.post('/api/users/password', usersController.setNewPassword);

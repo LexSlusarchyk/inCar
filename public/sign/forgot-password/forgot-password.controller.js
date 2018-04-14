@@ -5,11 +5,11 @@
         .module('lnd')
         .controller('ForgotPasswordController', ForgotPasswordController);
 
-    ForgotPasswordController.$inject = ['usersService'];
+    ForgotPasswordController.$inject = ['$rootScope', 'translateService', 'usersService', '$state'];
 
-    function ForgotPasswordController(usersService) {
+    function ForgotPasswordController($rootScope, translateService, usersService, $state) {
         var vm = this;
-
+        vm.profile = translateService.data.lang['profile'];
         vm.credentials = {};
 
         vm.submit = submit;
@@ -29,7 +29,9 @@
             });
         }
 
-
+        $rootScope.$on('lang-changed', function() {
+            vm.profile = translateService.data.lang['profile'];
+        })
 
     }
 

@@ -5,6 +5,7 @@ const app = alias.require('@root/app'),
     User = require('../models/User'),
     nodemailer = require('nodemailer'),
     uuid = require('uuid'),
+    bcrypt = require('bcrypt'),
     Promise = require('bluebird');
 
 module.exports = {
@@ -14,7 +15,8 @@ module.exports = {
     getUser,
     updateUser,
     activate,
-    requestPasswordChange
+    requestPasswordChange,
+    setNewPassword
 };
 
 
@@ -32,7 +34,7 @@ function signUp(req, res) {
         service: 'Gmail',
         auth: {
             user: 'incar.online@gmail.com',
-            pass: 'rapass11'
+            pass: 'newtemppass1'
         }
     });
 
@@ -69,12 +71,7 @@ function signUp(req, res) {
 }
 
 
-
-
-
 function requestPasswordChange(req, res) {
-
-
 
     var query = "SELECT * FROM users WHERE email='" + req.body.email + "' AND isActivated='1';";
 
@@ -85,17 +82,20 @@ function requestPasswordChange(req, res) {
             if (err) return res.sendStatus(500);
             user = results[0];
 
-            console.log(user.id);
+            if(user){
+                var token = uuid.v4();
+                var tokenCreateQuery = 'INSERT INTO usertokens (userId, token) VALUES("'
+                    + user.id + '" , "' + token + '")';
+                connection.query(tokenCreateQuery, function(err, results){
+                    if (err) return res.send(err);
+                    sendEmailVerification(token);
+                    res.sendStatus(200);
+                });
 
-            var token = uuid.v4();
-            var tokenCreateQuery = 'INSERT INTO usertokens (userId, token) VALUES("'
-                + user.id + '" , "' + token + '")';
-            connection.query(tokenCreateQuery, function(err, results){
-                if (err) return res.send(err);
-                sendEmailVerification(token);
-            });
+            } else {
+                res.sendStatus(404);
+            }
 
-            return res.sendStatus(200);
         })
     })
 
@@ -104,7 +104,7 @@ function requestPasswordChange(req, res) {
         service: 'Gmail',
         auth: {
             user: 'incar.online@gmail.com',
-            pass: 'rapass11'
+            pass: 'newtemppass1'
         }
     });
 
@@ -123,11 +123,35 @@ function requestPasswordChange(req, res) {
         });
     }
 
-
 }
 
+function setNewPassword (req, res){
+    var query = "SELECT * FROM usertokens WHERE token='" + req.body.token + "' ";
 
+    var user;
+    req.getConnection(function(err, connection) {
+        if (err) return res.sendStatus(500);
+        connection.query(query, function(err, results){
+            if (err) return res.sendStatus(500);
+            user = results[0];
 
+            if(user){
+                var userId = user.userId;
+                var userPassword = req.body.password;
+                var encryptedPassword = bcrypt.hashSync(userPassword, "$2a$10$EWsNxqKs2OgbEtU1Xkqln.");
+                var setPasswordQuery = 'UPDATE users SET password = "' + encryptedPassword + '" WHERE id="' + userId + '" LIMIT 1';
+                connection.query(setPasswordQuery, function(err, results){
+                    if (err) return res.send(err);
+                    res.sendStatus(200);
+                    console.log("new password set");
+                });
+            } else {
+                res.sendStatus(404);
+            }
+        })
+    })
+
+}
 
 function login(req, res) {
     var user = new User(req.body);

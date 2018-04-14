@@ -21,7 +21,8 @@
             updateProfile: updateProfile,
             getUsersList: getUsersList,
             getUser: getUser,
-            requestPasswordChange: requestPasswordChange
+            requestPasswordChange: requestPasswordChange,
+            setNewPassword: setNewPassword
         };
 
         getLocalStorageData();
@@ -72,6 +73,17 @@
 
             return defered.promise;
         }
+
+        function setNewPassword(credentials) {
+            var defered = $q.defer();
+            $http.post(apiUrl + '/api/users/password', credentials).then(function(data){
+                defered.resolve(data);
+            });
+
+            return defered.promise;
+        }
+
+
 
         function updateProfile(userData) {
             var defered = $q.defer();
