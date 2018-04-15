@@ -24,12 +24,15 @@
         return directive;
     }
 
-    EventTicketController.$inject = ['$rootScope', '$scope', '$http', '$element', '$uibModal', 'eventsService', 'confirmService'];
+    EventTicketController.$inject = ['$rootScope', '$scope', '$http', '$element', '$uibModal', 'eventsService', 'confirmService', 'usersService'];
     /* @ngInject */
-    function EventTicketController($rootScope, $scope, $http, $element, $uibModal, eventsService, confirmService) {
+    function EventTicketController($rootScope, $scope, $http, $element, $uibModal, eventsService, confirmService, usersService) {
         var vm = this;
         vm.removeTicket = removeTicket;
         vm.instance = undefined;
+
+        vm.loggedUser = usersService.data.userData;
+
 
 
         function removeTicket() {

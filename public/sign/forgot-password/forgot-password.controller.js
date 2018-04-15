@@ -7,7 +7,7 @@
 
     ForgotPasswordController.$inject = ['$rootScope', 'translateService', 'usersService', '$state'];
 
-    function ForgotPasswordController($rootScope, translateService, usersService, $state) {
+    function ForgotPasswordController($rootScope, translateService, usersServic$state) {
         var vm = this;
         vm.profile = translateService.data.lang['profile'];
         vm.credentials = {};

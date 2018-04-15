@@ -3,7 +3,7 @@
 	<p>Price: <span ng-bind="vm.ticket.price"></span> $</p>
 	<a data-ng-if="vm.ticket.price != 0 && !vm.ticket.notAvailable"
 	   class="btn btn-sm btn-primary pull-right"
-	   ui-sref="payment({ticketId: vm.ticket.id})"
+	   ui-sref="{{vm.loggedUser ? 'payment({ticketId: vm.ticket.id})' : 'sign.in'}}"
 	>Buy</a>
 	<a data-ng-if="vm.ticket.notAvailable"
 	   class="btn-warning btn-sm btn-primary pull-right"
