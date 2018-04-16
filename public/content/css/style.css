@@ -1313,5 +1313,15 @@ header .header-navigation ul li.active a:before {
   .home-follow-text > p{
     font-size: 10px;
   }
+
+  #home-header, #event-header {
+    font-size: 28px !important;
+    margin-left: 0 !important;
+  }
+
+  #event-title {
+    font-size: 18px !important;
+  }
+
 }
 

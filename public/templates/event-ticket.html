@@ -11,6 +11,6 @@
 	>Sold out</a>
 	<a data-ng-if="vm.ticket.price == 0"
 	   class="btn-success btn-sm btn-primary pull-right"
-	   ui-sref="payment({ticketId: vm.ticket.id})"
+	   ui-sref="{{vm.loggedUser ? 'payment({ticketId: vm.ticket.id})' : 'sign.in'}}"
 	>Free</a>
 </div>
