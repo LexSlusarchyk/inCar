@@ -26,7 +26,6 @@ angular.module('lnd')
 
 .controller('SignController', ['$rootScope', '$scope', '$location', function($rootScope, $scope, $location) {
 
-    
 }])
 
 .controller('SignInController', ['$rootScope', 'translateService', '$scope', '$http', '$state', '$location', 'usersService',
@@ -38,12 +37,14 @@ angular.module('lnd')
         vm.login = login;
         vm.onInputChange = onInputChange;
 
+
         activate();
 
         function activate() {
             $rootScope.$on('lang-changed', function() {
                 vm.profile = translateService.data.lang['profile'];
             })
+
         }
 
         function login(credentials) {
@@ -62,6 +63,7 @@ angular.module('lnd')
         function onInputChange() {
             vm.error = '';
         }
+
     }])
 
 .controller('SignUpController', ['$rootScope', '$scope', '$location', '$state', 'usersService', 'translateService', function($rootScope, $scope, $location, $state, usersService, translateService) {

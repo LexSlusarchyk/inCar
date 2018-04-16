@@ -4,7 +4,7 @@
 			<li ng-class="{active: path === '/signin'}"><a ui-sref="sign.in"><span ng-controller='SignInController as vm'>{{vm.profile.signIn}}</span></a></li>
 			<li ng-class="{active: path === '/signup'}"><a ui-sref="sign.up"><span ng-controller='SignInController as vm'>{{vm.profile.userSignUp}}</span></a></li>
 		</ul>
-		<div ui-view></div>
+		<div ui-view autoscroll="true"></div>
 	</div>
 	<div class="container-fluid" style="padding: 0;"><img src="content/images/background_registration.jpg" style="width:100%;"></div>
 </div>
